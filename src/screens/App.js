@@ -5,7 +5,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>AND BACK TO HELLO WE GO</Text>
+        <Text> Meal Planning </Text>
+        <Text>Nutrition and Cheatsheets</Text>
+        <Text>How Tos </Text>
       </View>
     );
   }
