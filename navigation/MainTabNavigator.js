@@ -6,9 +6,9 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
-import MealPlanScreen from '../screens/mealplan';
-import NutritionScreen from '../screens/nutrition';
-import HowToScreen from '../screens/howto';
+import MealPlanningScreen from '../screens/MealPlanningScreen';
+import NutritionScreen from '../screens/NutritionScreen';
+import HowToScreen from '../screens/HowToScreen';
 
 export default TabNavigator(
   {
@@ -16,7 +16,7 @@ export default TabNavigator(
       screen: HomeScreen,
     },
     MealPlan: {
-      screen: MealPlanScreen,
+      screen: MealPlanningScreen,
     },
     Nutrition: {
       screen: NutritionScreen,
@@ -32,22 +32,20 @@ export default TabNavigator(
         let iconName;
         switch (routeName) {
           case 'Home':
-            iconName = Platform.OS === 'ios'
-              ? `ios-information-circle${focused ? '' : '-outline'}`
-              : 'md-information-circle';
+            iconName =
+              Platform.OS === 'ios'
+                ? `ios-information-circle${focused ? '' : '-outline'}`
+                : 'md-information-circle';
             break;
           case 'MealPlan':
-            iconName = Platform.OS === 'ios'
-              ? `ios-options${focused ? '' : '-outline'}`
-              : 'md-options';
+            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
+            break;
           case 'Nutrition':
-            iconName = Platform.OS === 'ios'
-              ? `ios-options${focused ? '' : '-outline'}`
-              : 'md-options';
+            iconName =
+              Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
           case 'HowTo':
-            iconName = Platform.OS === 'ios'
-              ? `ios-options${focused ? '' : '-outline'}`
-              : 'md-options';
+            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
+            break;
         }
         return (
           <Ionicons
