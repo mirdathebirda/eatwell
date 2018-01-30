@@ -4,7 +4,7 @@ import { ExpoLinksView } from '@expo/samples';
 
 export default class MealPlanningScreen extends React.Component {
   static navigationOptions = {
-    title: 'Links',
+    title: 'Meal Planning',
   };
 
   render() {

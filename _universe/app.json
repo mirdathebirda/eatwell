@@ -2,7 +2,7 @@
   expo: {
     name: "My New Project",
     description: "No description",
-    slug: "my-new-project",
+    slug: "eatwell",
     privacy: "unlisted",
     sdkVersion: "UNVERSIONED",
     version: "1.0.0",
