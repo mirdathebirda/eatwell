@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "eatwell",
+    "name": "my-new-project",
     "description": "A very interesting project.",
-    "slug": "eatwell",
+    "slug": "my-new-project",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
