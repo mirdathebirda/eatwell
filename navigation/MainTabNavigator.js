@@ -6,19 +6,23 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import MealPlanningScreen from '../screens/MealPlanningScreen';
+import NutritionScreen from '../screens/NutritionScreen';
+import HowToScreen from '../screens/HowToScreen';
 
 export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
     },
-    Links: {
-      screen: LinksScreen,
+    MealPlan: {
+      screen: MealPlanningScreen,
     },
-    Settings: {
-      screen: SettingsScreen,
+    Nutrition: {
+      screen: NutritionScreen,
+    },
+    HowTo: {
+      screen: HowToScreen,
     },
   },
   {
@@ -33,12 +37,15 @@ export default TabNavigator(
                 ? `ios-information-circle${focused ? '' : '-outline'}`
                 : 'md-information-circle';
             break;
-          case 'Links':
+          case 'MealPlan':
             iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
             break;
-          case 'Settings':
+          case 'Nutrition':
             iconName =
               Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
+          case 'HowTo':
+            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
+            break;
         }
         return (
           <Ionicons
