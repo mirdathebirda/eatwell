@@ -1,9 +1,9 @@
 import React from 'react';
 import { ExpoConfigView } from '@expo/samples';
 
-export default class NutritionScreen extends React.Component {
+export default class HowToCompleteSkillsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Nutrition and Cheatsheets',
+    title: 'Completed Skills',
   };
 
   render() {

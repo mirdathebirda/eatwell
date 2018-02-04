@@ -2,9 +2,9 @@ import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 
-export default class MealPlanningScreen extends React.Component {
+export default class HowToMainScreen extends React.Component {
   static navigationOptions = {
-    title: 'Meal Planning',
+    title: 'How Tos',
   };
 
   render() {

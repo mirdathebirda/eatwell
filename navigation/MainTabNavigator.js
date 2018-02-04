@@ -6,9 +6,9 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
-import MealPlanningScreen from '../screens/MealPlanningScreen';
-import NutritionScreen from '../screens/NutritionScreen';
-import HowToScreen from '../screens/HowToScreen';
+import HowToMainScreen from '../screens/HowToMainScreen';
+import HowToCompleteSkillsScreen from '../screens/HowToCompleteSkillsScreen';
+import HowToSettingsScreen from '../screens/HowToSettingsScreen';
 
 
 export default TabNavigator(
@@ -16,14 +16,14 @@ export default TabNavigator(
     Home: {
       screen: HomeScreen,
     },
-    MealPlan: {
-      screen: MealPlanningScreen,
+    HowToMain: {
+      screen: HowToMainScreen,
     },
-    Nutrition: {
-      screen: NutritionScreen,
+    HowToCompleted: {
+      screen: HowToCompleteSkillsScreen,
     },
-    HowTo: {
-      screen: HowToScreen,
+    HowToSettings: {
+      screen: HowToSettingsScreen,
     },
   },
   {
@@ -38,13 +38,13 @@ export default TabNavigator(
                 ? `ios-information-circle${focused ? '' : '-outline'}`
                 : 'md-information-circle';
             break;
-          case 'MealPlan':
+          case 'HowToMain':
             iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
             break;
-          case 'Nutrition':
+          case 'HowToCompleted':
             iconName =
               Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
-          case 'HowTo':
+          case 'HowToSettings':
             iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
             break;
         }
