@@ -2,9 +2,9 @@ import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 
-export default class HowToSettingsScreen extends React.Component {
+export default class MacroScreen extends React.Component {
   static navigationOptions = {
-    title: 'Settings',
+    title: 'Macros',
   };
 
   render() {

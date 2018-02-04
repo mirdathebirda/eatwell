@@ -6,9 +6,9 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
-import HowToMainScreen from '../screens/HowToMainScreen';
-import HowToCompleteSkillsScreen from '../screens/HowToCompleteSkillsScreen';
-import HowToSettingsScreen from '../screens/HowToSettingsScreen';
+import HowToMainScreen from '../screens/HowTo/HowToMainScreen';
+import HowToCompleteSkillsScreen from '../screens/HowTo/HowToCompleteSkillsScreen';
+import HowToSettingsScreen from '../screens/HowTo/HowToSettingsScreen';
 
 
 export default TabNavigator(
