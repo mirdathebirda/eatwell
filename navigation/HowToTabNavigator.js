@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { TabNavigator, TabBarBottom } from 'react-navigation';
 
 import Colors from '../constants/Colors';
+import EatwellIcon from './RootNavigation'
 
 import HomeScreen from '../screens/HomeScreen';
 import HowToMainScreen from '../screens/HowTo/HowToMainScreen';
@@ -33,10 +34,7 @@ export default TabNavigator(
         let iconName;
         switch (routeName) {
           case 'Home':
-            iconName =
-              Platform.OS === 'ios'
-                ? `ios-information-circle${focused ? '' : '-outline'}`
-                : 'md-information-circle';
+            iconName = EatwellIcon;
             break;
           case 'HowToMain':
             iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';

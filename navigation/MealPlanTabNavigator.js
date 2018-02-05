@@ -1,10 +1,10 @@
 import React from 'react';
-import { Platform } from 'react-native';
-import { Image, Ionicons } from '@expo/vector-icons';
+import { Image, Platform } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { TabNavigator, TabBarBottom } from 'react-navigation';
 
 import Colors from '../constants/Colors';
-
+import EatwellIcon from './RootNavigation'
 import HomeScreen from '../screens/HomeScreen';
 import MealPlanMainScreen from '../screens/MealPlan/MealPlanMainScreen';
 import GroceryListScreen from '../screens/MealPlan/GroceryListScreen';
@@ -67,16 +67,3 @@ export default TabNavigator(
     swipeEnabled: false,
   }
 );
-
-//for Eatwell Logo
-class EatwellIcon extends React.Component {
-  render() {
-    return (
-      <Image
-        source={require('../assets/images/eatwell-logo.jpg')}
-        fadeDuration={0}
-        style={{width: 20, height: 20}}
-      />
-    );
-  }
-}
