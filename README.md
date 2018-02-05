@@ -9,6 +9,10 @@ Open up the desktop app and open eatwell project
 Download Expo Client App from the GooglePlayStore/Apple Store
 Enter URL (it can be found on the desktop client in the address bar next to the cog)
 
+## ????googleit????
+* css styles don't load -- look up how to organize stylesheets in react
+* icons for tabs? -- esp eatwell icon!!
+
 ## TO DO:
 ### Front End Work:
 * Get main screens stubs set up - ✓

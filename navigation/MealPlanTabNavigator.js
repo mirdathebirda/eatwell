@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { Image, Ionicons } from '@expo/vector-icons';
 import { TabNavigator, TabBarBottom } from 'react-navigation';
 
 import Colors from '../constants/Colors';
@@ -36,10 +36,7 @@ export default TabNavigator(
         let iconName;
         switch (routeName) {
           case 'Home':
-            iconName =
-              Platform.OS === 'ios'
-                ? `ios-information-circle${focused ? '' : '-outline'}`
-                : 'md-information-circle';
+            iconName = EatwellIcon;
             break;
           case 'MealPlanMain':
             iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
@@ -70,3 +67,16 @@ export default TabNavigator(
     swipeEnabled: false,
   }
 );
+
+//for Eatwell Logo
+class EatwellIcon extends React.Component {
+  render() {
+    return (
+      <Image
+        source={require('../assets/images/eatwell-logo.jpg')}
+        fadeDuration={0}
+        style={{width: 20, height: 20}}
+      />
+    );
+  }
+}

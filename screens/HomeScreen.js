@@ -19,16 +19,15 @@ export default class HomeScreen extends React.Component {
   };
 
   render() {
-		const { navigate } = this.props.navigation;
+		//usage: navigate.('routeName') - routeNames can be found in TabNavigators
+		const { navigate } = this.props.navigation; //used to link to other pages
 
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-						<Button title="Go to Meal Plan Main Page!!!!" onPress={() => navigate('MealPlanMain')}/>
-						<Button title="Go to Nutrition Main Page!!!!" onPress={() => navigate('NutritionMain')}/>
-						<Button title="Go to HowTo Main Page!!!!" onPress={() => navigate('HowToMain')}/>
-          </View>
+						<Button styles={styles.mainButtons} title="Go to Meal Plan Main Page!!!!" onPress={() => navigate('MealPlanMain')}/>
+						<Button styles={styles.mainButtons} title="Go to Nutrition Main Page!!!!" onPress={() => navigate('NutritionMain')}/>
+						<Button styles={styles.mainButtons} title="Go to HowTo Main Page!!!!" onPress={() => navigate('HowToMain')}/>
         </ScrollView>
       </View>
     );
@@ -36,7 +35,15 @@ export default class HomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+	mainButtons:{
+		backgroundColor:'#293753',
+		fontSize: 50,
+		marginTop: 100,
+		marginBottom: 100,
+		marginLeft:10,
+		marginRight:10,
+	},
+	container: {
     flex: 1,
     backgroundColor: '#fff',
   },
@@ -50,32 +57,12 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingTop: 30,
   },
-  welcomeContainer: {
-    alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
   welcomeImage: {
     width: 100,
     height: 80,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
-  },
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
   },
   getStartedText: {
     fontSize: 17,
