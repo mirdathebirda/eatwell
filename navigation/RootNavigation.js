@@ -63,7 +63,7 @@ export class EatwellIcon extends React.Component {
   render() {
     return (
       <Image
-        source={require('../assets/images/eatwell-logo.jpg')}
+        source={require('../assets/images/eatwell-logo.png')}
         fadeDuration={0}
         style={{width: 20, height: 20}}
       />
