@@ -2,12 +2,20 @@ import { Notifications } from 'expo';
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
+import MealPlanNavigator from './MealPlanTabNavigator';
+import NutritionNavigator from './NutritionTabNavigator';
 import HowToTabNavigator from './HowToTabNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
 
 const RootStackNavigator = StackNavigator(
   {
-    Main: {
+		MealPlan: {
+      screen: MealPlanNavigator,
+    },
+		Nutrition: {
+      screen: NutritionNavigator,
+    },
+		HowTo: {
       screen: HowToTabNavigator,
     },
   },
