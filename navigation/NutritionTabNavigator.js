@@ -4,11 +4,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { TabNavigator, TabBarBottom } from 'react-navigation';
 
 import Colors from '../constants/Colors';
+import EatwellIcon from './RootNavigation'
 
 import HomeScreen from '../screens/HomeScreen';
-import HowToMainScreen from '../screens/HowToMainScreen';
-import HowToCompleteSkillsScreen from '../screens/HowToCompleteSkillsScreen';
-import HowToSettingsScreen from '../screens/HowToSettingsScreen';
+import NutritionMainScreen from '../screens/Nutrition/NutritionMainScreen';
+import ArticleScreen from '../screens/Nutrition/ArticleScreen';
+import CheatsheetScreen from '../screens/Nutrition/CheatsheetScreen';
+import MacroScreen from '../screens/Nutrition/MacroScreen';
+import NutritionSettingsScreen from '../screens/Nutrition/NutritionSettingsScreen';
 
 
 export default TabNavigator(
@@ -16,14 +19,20 @@ export default TabNavigator(
     Home: {
       screen: HomeScreen,
     },
-    HowToMain: {
-      screen: HowToMainScreen,
+    NutritionMain: {
+      screen: NutritionMainScreen,
     },
-    HowToCompleted: {
-      screen: HowToCompleteSkillsScreen,
+    Articles: {
+      screen: ArticleScreen,
     },
-    HowToSettings: {
-      screen: HowToSettingsScreen,
+		Cheatsheet: {
+      screen: CheatsheetScreen,
+    },
+		Macros: {
+      screen: MacroScreen,
+    },
+    NutritionSettings: {
+      screen: NutritionSettingsScreen,
     },
   },
   {
@@ -33,18 +42,21 @@ export default TabNavigator(
         let iconName;
         switch (routeName) {
           case 'Home':
-            iconName =
-              Platform.OS === 'ios'
-                ? `ios-information-circle${focused ? '' : '-outline'}`
-                : 'md-information-circle';
+            iconName = EatwellIcon;
             break;
-          case 'HowToMain':
+          case 'NutritionMain':
             iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
             break;
-          case 'HowToCompleted':
+          case 'Articles':
             iconName =
               Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
-          case 'HowToSettings':
+					case 'Cheatsheet':
+            iconName =
+              Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
+					case 'Macros':
+            iconName =
+              Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
+          case 'NutritionSettings':
             iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
             break;
         }

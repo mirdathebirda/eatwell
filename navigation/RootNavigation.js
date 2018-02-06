@@ -1,14 +1,23 @@
 import { Notifications } from 'expo';
 import React from 'react';
+import { Image } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import MainTabNavigator from './MainTabNavigator';
+import MealPlanNavigator from './MealPlanTabNavigator';
+import NutritionNavigator from './NutritionTabNavigator';
+import HowToTabNavigator from './HowToTabNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
 
 const RootStackNavigator = StackNavigator(
   {
-    Main: {
-      screen: MainTabNavigator,
+		MealPlan: {
+      screen: MealPlanNavigator,
+    },
+		Nutrition: {
+      screen: NutritionNavigator,
+    },
+		HowTo: {
+      screen: HowToTabNavigator,
     },
   },
   {
@@ -47,4 +56,17 @@ export default class RootNavigator extends React.Component {
   _handleNotification = ({ origin, data }) => {
     console.log(`Push notification ${origin} with data: ${JSON.stringify(data)}`);
   };
+}
+
+//for Eatwell Logo
+export class EatwellIcon extends React.Component {
+  render() {
+    return (
+      <Image
+        source={require('../assets/images/eatwell-logo.png')}
+        fadeDuration={0}
+        style={{width: 20, height: 20}}
+      />
+    );
+  }
 }
