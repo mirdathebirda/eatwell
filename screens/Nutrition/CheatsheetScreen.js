@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 
 export default class CheatsheetScreen extends React.Component {
@@ -10,9 +10,11 @@ export default class CheatsheetScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        {/* Go ahead and delete ExpoLinksView and replace it with your
-           * content, we just wanted to provide you with some helpful links */}
-        <ExpoLinksView />
+				<Text> Correct Portion Sizes</Text>
+				<Text> Pick in produce season </Text>
+				<Text> Is your meat done? </Text>
+				<Text> How long does food last in the fridge? </Text>
+				<Text> Common Substitutions </Text>
       </ScrollView>
     );
   }
