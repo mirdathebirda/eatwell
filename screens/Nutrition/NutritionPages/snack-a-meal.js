@@ -9,19 +9,19 @@ export default class SnackAMeal extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.header}> Call a snack a meal, and you're less apt to overeat </Text>
-				<Text> Labeling some foods as meals rather than snacks could cut down on overeating, a new study suggests.
+				<Text> Labeling some foods as meals rather than snacks could cut down on overeating, a new study suggests.</Text>
 
-				The research included 80 people who were asked to eat a pasta dish presented as either a snack (eaten standing up from a plastic pot with a plastic fork) or a meal (eaten seated at a table from a ceramic plate with a metal fork).
+				<Text>The research included 80 people who were asked to eat a pasta dish presented as either a snack (eaten standing up from a plastic pot with a plastic fork) or a meal (eaten seated at a table from a ceramic plate with a metal fork).</Text>
 
-				After they ate the meals, the participants were invited to taste-test additional foods, such as animal crackers and M&Ms.
+				<Text>After they ate the meals, the participants were invited to taste-test additional foods, such as animal crackers and M&Ms.</Text>
 
-				Those who'd eaten the pasta presented as a snack ate much more during the taste test than those who'd eaten the paste presented as a meal, according to the study, published online recently in the journal Appetite.
+				<Text>Those who'd eaten the pasta presented as a snack ate much more during the taste test than those who'd eaten the paste presented as a meal, according to the study, published online recently in the journal Appetite.</Text>
 
-				"With our lives getting busier, increasing numbers of people are eating on the go and consuming foods that are labeled as 'snacks' to sustain them," said study author Jane Ogden, a professor of health psychology at the University of Surrey, England.
+				<Text>"With our lives getting busier, increasing numbers of people are eating on the go and consuming foods that are labeled as 'snacks' to sustain them," said study author Jane Ogden, a professor of health psychology at the University of Surrey, England.</Text>
 
-				"What we have found is that those who are consuming snacks are more likely to overeat as they may not realize or even remember what they have eaten," she added in a university news release.
+				<Text>"What we have found is that those who are consuming snacks are more likely to overeat as they may not realize or even remember what they have eaten," she added in a university news release.</Text>
 
-				"To overcome this, we should call our food a meal and eat it as meal, helping make us more aware of what we are eating so that we don't overeat later on," she suggested.</Text>
+				<Text>"To overcome this, we should call our food a meal and eat it as meal, helping make us more aware of what we are eating so that we don't overeat later on," she suggested.</Text>
       </View>
     );
   }
