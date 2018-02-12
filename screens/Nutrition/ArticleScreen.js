@@ -1,6 +1,8 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
+import Colors from '../../constants/Colors';
+
 
 export default class ArticleScreen extends React.Component {
   static navigationOptions = {
@@ -9,22 +11,43 @@ export default class ArticleScreen extends React.Component {
 
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <Text> 10 ways to make recipes healthier</Text>
-				<Text> Call a snack a meal, and you're less apt to overeat </Text>
-				<Text> 8 eating habits you should cut right now </Text>
-				<Text>How exercise can make for healthier fat</Text>
-				<Text> Tips for improving your health</Text>
-				<Text>All about coffee</Text>
-      </ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.articleb}> 10 ways to make recipes healthier</Text>
+				<Text style={styles.articley}> Call a snack a meal, and you're less apt to overeat </Text>
+				<Text style={styles.articleb}> 8 eating habits you should cut right now </Text>
+				<Text style={styles.articley}>How exercise can make for healthier fat</Text>
+				<Text style={styles.articleb}> Tips for improving your health</Text>
+				<Text style={styles.articley}>All about coffee</Text>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
+		flex: 1,
+		paddingTop: 15,
+		paddingLeft: 15,
+		paddingRight:15,
+		backgroundColor: '#fff',
   },
+	articleb: {
+		color: '#fff',
+		backgroundColor: Colors.navy,
+		marginTop:5,
+		marginBottom: 5,
+		paddingTop: 15,
+		paddingBottom: 15,
+		paddingLeft: 5,
+		paddingRight: 5,
+	},
+	articley: {
+		backgroundColor: Colors.lemon,
+		marginTop:5,
+		marginBottom: 5,
+		paddingTop: 15,
+		paddingBottom: 15,
+		paddingLeft: 5,
+		paddingRight: 5,
+	},
 });
