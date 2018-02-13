@@ -10,27 +10,36 @@ Download Expo Client App from the GooglePlayStore/Apple Store
 Enter URL (it can be found on the desktop client in the address bar next to the cog)
 
 ## ????googleit????
-* css styles don't load -- look up how to organize stylesheets in react
+* ~css styles don't load -- look up how to organize stylesheets in react~
 * icons for tabs? -- esp eatwell icon!!
+* routing - why is it only for html links -.-"
 
 ## TO DO:
 ### Front End Work:
-* Get main screens stubs set up - ✓
-* Figure out how to create a home screen and 3 tab navigation for mp, nutrition, and howtos
-* Set up flow for the screens
+* ✓ - Get main screens stubs set up
+* ✓ - Figure out how to create a home screen and 3 tab navigation for mp, nutrition, and howtos
+* ✓ - Set up flow for the screens
 * Start working on styles for the screens (Nutrition and HT will be easier than MP)
+* Look up how to do routing so the pages go to the right articles
+* Find and download images used in Invision prototype
 
 * How To
 	* How To Home
 	* How To Completed
 	* Settings?
 
+		* Create functionality for "I got it" button -- should changed to (✓)
+		* ✓ - Map up markup for HowTos
+
 * Nutrition
-	* Nutrition Home
-	* Articles
-	* Cheatsheet
+	* ✓ - Nutrition Home
+	* ✓ - Articles
+	* ✓ - Cheatsheet
 	* Macros
 	* Settings
+
+		* ✓ - figure out basic style
+		* figure out routing to link to individual pages
 
 * Meal Plan
 	* Meal Plan Home Screen
