@@ -1,5 +1,7 @@
 import React from 'react';
 import { ExpoConfigView } from '@expo/samples';
+import { ProximaText } from '../../components/StyledText';
+
 
 export default class HowToSettingsScreen extends React.Component {
   static navigationOptions = {

@@ -1,7 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
+import { ProximaText } from '../../components/StyledText';
+
 
 export default class CheatsheetScreen extends React.Component {
   static navigationOptions = {
@@ -11,11 +13,11 @@ export default class CheatsheetScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-				<Text style={styles.articleb}> Correct Portion Sizes</Text>
-				<Text style={styles.articley}> Pick in produce season </Text>
-				<Text style={styles.articleb}> Is your meat done? </Text>
-				<Text style={styles.articley}> How long does food last in the fridge? </Text>
-				<Text style={styles.articleb}> Common Substitutions </Text>
+				<ProximaText style={styles.articleb}> Correct Portion Sizes</ProximaText>
+				<ProximaText style={styles.articley}> Pick in produce season </ProximaText>
+				<ProximaText style={styles.articleb}> Is your meat done? </ProximaText>
+				<ProximaText style={styles.articley}> How long does food last in the fridge? </ProximaText>
+				<ProximaText style={styles.articleb}> Common Substitutions </ProximaText>
       </View>
     );
   }

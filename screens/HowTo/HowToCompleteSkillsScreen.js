@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExpoConfigView } from '@expo/samples';
+import { ProximaText } from '../../components/StyledText';
 
 export default class HowToCompleteSkillsScreen extends React.Component {
   static navigationOptions = {

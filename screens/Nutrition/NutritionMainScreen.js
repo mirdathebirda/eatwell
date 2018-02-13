@@ -1,7 +1,8 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
+import { ProximaText } from '../../components/StyledText';
 
 
 
@@ -13,15 +14,15 @@ export default class NutritionMainScreen extends React.Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text style={styles.header}> Frequently Viewed Articles </Text>
-				<Text style={styles.articleb}> 10 ways to make recipes healthier</Text>
-				<Text style={styles.articley}> Call a snack a meal, and you're less apt to overeat </Text>
-				<Text style={styles.articleb}> 8 eating habits you should cut right now </Text>
+				<ProximaText style={styles.header}> Frequently Viewed Articles </ProximaText>
+				<ProximaText style={styles.articleb}> 10 ways to make recipes healthier</ProximaText>
+				<ProximaText style={styles.articley}> Call a snack a meal, and you're less apt to overeat </ProximaText>
+				<ProximaText style={styles.articleb}> 8 eating habits you should cut right now </ProximaText>
 
-				<Text style={styles.header}> Newest Articles </Text>
-				<Text style={styles.articley}>How exercise can make for healthier fat</Text>
-				<Text style={styles.articleb}> Tips for improving your health</Text>
-				<Text style={styles.articley}>All about coffee</Text>
+				<ProximaText style={styles.header}> Newest Articles </ProximaText>
+				<ProximaText style={styles.articley}>How exercise can make for healthier fat</ProximaText>
+				<ProximaText style={styles.articleb}> Tips for improving your health</ProximaText>
+				<ProximaText style={styles.articley}>All about coffee</ProximaText>
 			</View>
 		);
 	}

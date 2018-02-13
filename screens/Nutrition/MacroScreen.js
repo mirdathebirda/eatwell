@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
+import { ProximaText } from '../../components/StyledText';
 
 
 export default class MacroScreen extends React.Component {
@@ -12,10 +13,10 @@ export default class MacroScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.articleb}> What are nutrition macros? </Text>
-				<Text style={styles.articley}> Describe your Daily Activity </Text>
-				<Text style={styles.articleb}> Exercise Output </Text>
-				<Text style={styles.articley}> Goals </Text>
+        <ProximaText style={styles.articleb}> What are nutrition macros? </ProximaText>
+				<ProximaText style={styles.articley}> Describe your Daily Activity </ProximaText>
+				<ProximaText style={styles.articleb}> Exercise Output </ProximaText>
+				<ProximaText style={styles.articley}> Goals </ProximaText>
       </View>
     );
   }

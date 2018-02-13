@@ -1,6 +1,8 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
+import { ProximaText } from '../../components/StyledText';
+
 
 export default class GroceryListScreen extends React.Component {
   static navigationOptions = {
@@ -10,26 +12,26 @@ export default class GroceryListScreen extends React.Component {
   render() {
     return (
       <View>
-				<Text style={styles.header}> Produce </Text>
-				<Text> 4oz broccoli </Text>
-				<Text> 2 beefsteak tomatoes </Text>
+				<ProximaText style={styles.header}> Produce </ProximaText>
+				<ProximaText> 4oz broccoli </ProximaText>
+				<ProximaText> 2 beefsteak tomatoes </ProximaText>
 
-				<Text style={styles.header}> Meat </Text>
-				<Text> 1lb of chicken </Text>
+				<ProximaText style={styles.header}> Meat </ProximaText>
+				<ProximaText> 1lb of chicken </ProximaText>
 
-				<Text style={styles.header}> Dairy </Text>
-				<Text>1 cup buttermilk </Text>
-				<Text> 1 large egg</Text>
+				<ProximaText style={styles.header}> Dairy </ProximaText>
+				<ProximaText>1 cup buttermilk </ProximaText>
+				<ProximaText> 1 large egg</ProximaText>
 
-				<Text style={styles.header}>Dry/Baking Goods</Text>
-				<Text> 1 cup Panko breadcrumbs </Text>
-				<Text> 3/4 all-purpose flour </Text>
-				<Text> 1/2 up cornstarch </Text>
+				<ProximaText style={styles.header}>Dry/Baking Goods</ProximaText>
+				<ProximaText> 1 cup Panko breadcrumbs </ProximaText>
+				<ProximaText> 3/4 all-purpose flour </ProximaText>
+				<ProximaText> 1/2 up cornstarch </ProximaText>
 
-				<Text style={styles.header}>Spices and Sauces</Text>
-				<Text>1/2 cup mayonaise</Text>
-				<Text>1/4 cup sweet chili sauce</Text>
-				<Text>1 tbsp hot sauce (Sriracha)</Text>
+				<ProximaText style={styles.header}>Spices and Sauces</ProximaText>
+				<ProximaText>1/2 cup mayonaise</ProximaText>
+				<ProximaText>1/4 cup sweet chili sauce</ProximaText>
+				<ProximaText>1 tbsp hot sauce (Sriracha)</ProximaText>
 			</View>
     );
   }
