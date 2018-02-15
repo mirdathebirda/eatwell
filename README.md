@@ -21,7 +21,13 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 * ✓ - Set up flow for the screens
 * Start working on styles for the screens (Nutrition and HT will be easier than MP)
 * Look up how to do routing so the pages go to the right articles
-* Find and download images used in Invision prototype
+* Find and download assets used in Invision prototype (fonts,images)
+*
+
+* Home Screen
+	*  ✓ - add images
+	* fix styles
+	* remove the bottom navigation
 
 * How To
 	* How To Home
