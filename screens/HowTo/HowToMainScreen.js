@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image,ScrollView, StyleSheet, View } from 'react-native';
+import { Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import { ProximaText } from '../../components/StyledText';
 
@@ -13,36 +13,36 @@ export default class HowToMainScreen extends React.Component {
       <ScrollView style={styles.container}>
 				<ProximaText style={styles.header}>Prep</ProximaText>
 				<View style={styles.row}>
-					<View style={styles.item}>
+					<TouchableOpacity style={styles.item}>
 		        <Image style={styles.image} source={require('../../assets/images/howtos/dice.jpeg')} />
 						<ProximaText> Dice </ProximaText>
-					</View>
-					<View style={styles.item}>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/slice.jpg')} />
 						<ProximaText> Slice </ProximaText>
-					</View>
+					</TouchableOpacity>
 				</View>
 				<ProximaText style={styles.header}>Cook</ProximaText>
 				<View style={styles.row}>
-					<View style={styles.item}>
+					<TouchableOpacity style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/fryegg.jpg')} />
 						<ProximaText> Fry an Egg </ProximaText>
-					</View>
-					<View style={styles.item}>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/sear.jpg')} />
 						<ProximaText> Sear a steak </ProximaText>
-					</View>
+					</TouchableOpacity>
 				</View>
 				<ProximaText style={styles.header}>Bake</ProximaText>
 				<View style={styles.row}>
-					<View style={styles.item}>
+					<TouchableOpacity style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/softpeak.jpg')} />
 						<ProximaText> Get a soft peak </ProximaText>
-					</View>
-					<View style={styles.item}>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/frostcake.jpg')} />
 						<ProximaText> Frost a cake </ProximaText>
-					</View>
+					</TouchableOpacity>
 				</View>
       </ScrollView>
     );
