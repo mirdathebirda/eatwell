@@ -24,7 +24,7 @@ export default class HomeScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-				<ProximaText style={styles.header}> Eatwell </ProximaText>
+				<ProximaText style={styles.header}> eatwell </ProximaText>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 					<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
 			      <Image style={styles.button} source={require('../assets/images/mealplanning.jpg')} />
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
 		marginBottom:10,
 		marginLeft:10,
 		marginRight:10,
-		paddingTop:15,
-		paddingBottom:15,
+		paddingTop:7,
+		paddingBottom:7,
 		paddingLeft:5,
 		paddingRight:5,
 		width: null,

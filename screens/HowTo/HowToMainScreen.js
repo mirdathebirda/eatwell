@@ -11,20 +11,38 @@ export default class HowToMainScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
+				<ProximaText style={styles.header}>Prep</ProximaText>
 				<View style={styles.row}>
-					<ProximaText style={styles.header}>Prep</ProximaText>
-	        <Image style={styles.image} source={require('../../assets/images/howtos/dice.jpeg')} />
-					<Image style={styles.image} source={require('../../assets/images/howtos/slice.jpg')} />
+					<View style={styles.item}>
+		        <Image style={styles.image} source={require('../../assets/images/howtos/dice.jpeg')} />
+						<ProximaText> Dice </ProximaText>
+					</View>
+					<View style={styles.item}>
+						<Image style={styles.image} source={require('../../assets/images/howtos/slice.jpg')} />
+						<ProximaText> Slice </ProximaText>
+					</View>
 				</View>
+				<ProximaText style={styles.header}>Cook</ProximaText>
 				<View style={styles.row}>
-					<ProximaText style={styles.header}>Cook</ProximaText>
-					<Image style={styles.image} source={require('../../assets/images/howtos/fryegg.jpg')} />
-					<Image style={styles.image} source={require('../../assets/images/howtos/sear.jpg')} />
+					<View style={styles.item}>
+						<Image style={styles.image} source={require('../../assets/images/howtos/fryegg.jpg')} />
+						<ProximaText> Fry an Egg </ProximaText>
+					</View>
+					<View style={styles.item}>
+						<Image style={styles.image} source={require('../../assets/images/howtos/sear.jpg')} />
+						<ProximaText> Sear a steak </ProximaText>
+					</View>
 				</View>
+				<ProximaText style={styles.header}>Bake</ProximaText>
 				<View style={styles.row}>
-					<ProximaText style={styles.header}>Bake</ProximaText>
-					<Image style={styles.image} source={require('../../assets/images/howtos/softpeak.jpg')} />
-					<Image style={styles.image} source={require('../../assets/images/howtos/frostcake.jpg')} />
+					<View style={styles.item}>
+						<Image style={styles.image} source={require('../../assets/images/howtos/softpeak.jpg')} />
+						<ProximaText> Get a soft peak </ProximaText>
+					</View>
+					<View style={styles.item}>
+						<Image style={styles.image} source={require('../../assets/images/howtos/frostcake.jpg')} />
+						<ProximaText> Frost a cake </ProximaText>
+					</View>
 				</View>
       </ScrollView>
     );
@@ -39,11 +57,26 @@ const styles = StyleSheet.create({
   },
 	header: {
 		fontSize: 20,
-		marginTop: 5,
-		marginBottom: 5,
+		marginTop: 10,
+		marginBottom: 10,
+		marginLeft:5,
+	},
+	row: {
+		flex:1,
+		flexDirection: 'row',
+		marginRight:5,
+		marginLeft:5,
+	},
+	item: {
+		borderColor:'#000000',
+		borderWidth:0.8,
+		marginRight:5,
+		marginLeft:5,
+		paddingBottom:5,
 	},
 	image: {
-		width:50,
-		height:50,
+		width:165,
+		height:165,
+		marginBottom:5,
 	}
 });
