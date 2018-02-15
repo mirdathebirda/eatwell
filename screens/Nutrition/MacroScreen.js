@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
@@ -12,12 +12,12 @@ export default class MacroScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <ProximaText style={styles.articleb}> What are nutrition macros? </ProximaText>
 				<ProximaText style={styles.articley}> Describe your Daily Activity </ProximaText>
 				<ProximaText style={styles.articleb}> Exercise Output </ProximaText>
 				<ProximaText style={styles.articley}> Goals </ProximaText>
-      </View>
+      </ScrollView>
     );
   }
 }

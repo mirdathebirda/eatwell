@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 
@@ -7,7 +7,7 @@ import Colors from '../../constants/Colors';
 export default class AllAboutCoffee extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}> All about coffee </Text>
 				<Text> Coffee is among the most consumed — and controversial — beverages in the world. While coffee should be treated with care and avoided altogether by those who metabolize it poorly, it also provides health benefits to many people. Read on to find out what they are – and how to drink coffee responsibly. </Text>
 				<Text> Coffee is the second most popular drink in the world, trailing only water and, debatably, tea. </Text>
@@ -40,7 +40,7 @@ export default class AllAboutCoffee extends React.Component {
 				<Text>better on tests of cognitive function if they had regularly consumed coffee over the course of their lifetimes.</Text>
 				<Text>Take-home: A little bit of coffee/caffeine before important tasks requiring alertness and energy can be a good thing.</Text>
 
-      </View>
+      </ScrollView>
     );
   }
 }

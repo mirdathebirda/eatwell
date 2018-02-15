@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 
@@ -7,7 +7,7 @@ import Colors from '../../constants/Colors';
 export default class HealthierRecipes extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}> How exercise can make for healthier fat</Text>
 				<Text> Exercise could help to make your fat tissue healthier, which, hear me out, is a good thing.</Text>
 
@@ -43,7 +43,7 @@ export default class HealthierRecipes extends React.Component {
 				<Text>Dr. Horowitz understands. “There is no doubt that the best thing for metabolic health is to lose weight.”</Text>
 				<Text>But at this time of year, he says, when fat gain is common, a brisk walk or jog might make this added fat healthier and more stable, and the broader effects on our bodies a little less concerning.
 				</Text>
-      </View>
+      </ScrollView>
     );
   }
 }

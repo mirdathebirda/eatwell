@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { Image,ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import { ProximaText } from '../../components/StyledText';
 
@@ -12,9 +12,12 @@ export default class HowToMainScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        {/* Go ahead and delete ExpoLinksView and replace it with your
-           * content, we just wanted to provide you with some helpful links */}
-        <ExpoLinksView />
+        <Image source={require('../../assets/images/howtos/dice.jpeg')} />
+				<Image source={require('../../assets/images/howtos/slice.jpg')} />
+				<Image source={require('../../assets/images/howtos/fryegg.jpg')} />
+				<Image source={require('../../assets/images/howtos/sear.jpg')} />
+				<Image source={require('../../assets/images/howtos/softpeak.jpg')} />
+				<Image source={require('../../assets/images/howtos/frostcake.jpg')} />
       </ScrollView>
     );
   }

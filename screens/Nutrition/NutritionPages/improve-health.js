@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 
@@ -7,7 +7,7 @@ import Colors from '../../constants/Colors';
 export default class ImprovingHealth extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}> Tips for improving your health </Text>
 				<Text>Good nutrition is one of the keys to a healthy life. You can improve your health by keeping a balanced diet. You should eat foods that contain vitamins and minerals. This includes fruits, vegetables, whole grains, dairy, and a source of protein.</Text>
 				<Text>Ask yourself the following questions. If you answer yes to any of them, talk to your doctor about your health. You may need to improve your eating habits for better nutrition.</Text>
@@ -46,7 +46,7 @@ export default class ImprovingHealth extends React.Component {
 					- If I’m on a strict diet, such as vegetarian or vegan, how can I improve my health?
 					- Are there certain eating habits I should follow for my health condition?
 				</Text>
-      </View>
+      </ScrollView>
     );
   }
 }

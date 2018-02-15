@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 
@@ -7,7 +7,7 @@ import Colors from '../../constants/Colors';
 export default class EightEatingHabits extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}>8 eating habits you should cut right now</Text>
 				<Text>No one eats perfectly all the time – even dietitians! But when bad habits become common practice, you can end up with weight gain, high cholesterol, high blood pressure and a host of other potential health problems. So which lousy habits are getting folks into trouble? Here are the top 10 faux pas on our hit list, and how to avoid them. How many are part of your regular routine?</Text>
 				<Text> 1: Poor Meal Planning </Text>
@@ -34,7 +34,7 @@ export default class EightEatingHabits extends React.Component {
 
 				<Text> 8: Giant Portion Sizes</Text>
 				<Text> You think you can eyeball portions but have you ever really measured out your morning cereal, spoonfuls of peanut butter or olive oil for cooking? Overdoing portions (even with healthy foods) can cause a calorie overload. Just do it a few times to give yourself some perspective. </Text>
-      </View>
+      </ScrollView>
     );
   }
 }

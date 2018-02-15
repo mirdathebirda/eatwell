@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
@@ -13,7 +13,7 @@ export default class NutritionMainScreen extends React.Component {
 
 	render() {
 		return (
-			<View style={styles.container}>
+			<ScrollView style={styles.container}>
 				<ProximaText style={styles.header}> Frequently Viewed Articles </ProximaText>
 				<ProximaText style={styles.articleb}> 10 ways to make recipes healthier</ProximaText>
 				<ProximaText style={styles.articley}> Call a snack a meal, and you're less apt to overeat </ProximaText>
@@ -23,7 +23,7 @@ export default class NutritionMainScreen extends React.Component {
 				<ProximaText style={styles.articley}>How exercise can make for healthier fat</ProximaText>
 				<ProximaText style={styles.articleb}> Tips for improving your health</ProximaText>
 				<ProximaText style={styles.articley}>All about coffee</ProximaText>
-			</View>
+			</ScrollView>
 		);
 	}
 }

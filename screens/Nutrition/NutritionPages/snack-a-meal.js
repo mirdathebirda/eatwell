@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 
@@ -7,7 +7,7 @@ import Colors from '../../constants/Colors';
 export default class SnackAMeal extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}> Call a snack a meal, and you're less apt to overeat </Text>
 				<Text> Labeling some foods as meals rather than snacks could cut down on overeating, a new study suggests.</Text>
 
@@ -22,7 +22,7 @@ export default class SnackAMeal extends React.Component {
 				<Text>"What we have found is that those who are consuming snacks are more likely to overeat as they may not realize or even remember what they have eaten," she added in a university news release.</Text>
 
 				<Text>"To overcome this, we should call our food a meal and eat it as meal, helping make us more aware of what we are eating so that we don't overeat later on," she suggested.</Text>
-      </View>
+      </ScrollView>
     );
   }
 }

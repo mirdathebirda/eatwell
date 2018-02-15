@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 
@@ -7,7 +7,7 @@ import Colors from '../../constants/Colors';
 export default class HealthierRecipes extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}> 10 ways to make recipes healthier</Text>
 				<Text> 1. Make creamy dishes without the cream </Text>
 				<Text> 2. Try cooking with less oil </Text>
@@ -19,7 +19,7 @@ export default class HealthierRecipes extends React.Component {
 				<Text> 8. Slim down homemade ice cream</Text>
 				<Text> 9. Add grains or vegetables to meaty dishes </Text>
 				<Text> 10. Reduce cheese, keep the flavor </Text>
-      </View>
+      </ScrollView>
     );
   }
 }

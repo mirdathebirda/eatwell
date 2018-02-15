@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
@@ -12,13 +12,13 @@ export default class CheatsheetScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
 				<ProximaText style={styles.articleb}> Correct Portion Sizes</ProximaText>
 				<ProximaText style={styles.articley}> Pick in produce season </ProximaText>
 				<ProximaText style={styles.articleb}> Is your meat done? </ProximaText>
 				<ProximaText style={styles.articley}> How long does food last in the fridge? </ProximaText>
 				<ProximaText style={styles.articleb}> Common Substitutions </ProximaText>
-      </View>
+      </ScrollView>
     );
   }
 }
