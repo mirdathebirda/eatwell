@@ -2,6 +2,7 @@ import React from 'react';
 import { Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import { ProximaText } from '../../components/StyledText';
+import { SearchBar } from 'react-native-elements'
 
 export default class HowToMainScreen extends React.Component {
   static navigationOptions = {
@@ -11,6 +12,9 @@ export default class HowToMainScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
+				<SearchBar
+				  lightTheme round android
+				  placeholder='Type Here...' />
 				<ProximaText style={styles.header}>Prep</ProximaText>
 				<View style={styles.row}>
 					<TouchableOpacity style={styles.item}>
