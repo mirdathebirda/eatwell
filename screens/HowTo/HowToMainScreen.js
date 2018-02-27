@@ -13,33 +13,33 @@ export default class HowToMainScreen extends React.Component {
       <ScrollView style={styles.container}>
 				<ProximaText style={styles.header}>Prep</ProximaText>
 				<View style={styles.row}>
-					<TouchableOpacity style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('Dice')} style={styles.item}>
 		        <Image style={styles.image} source={require('../../assets/images/howtos/dice.jpeg')} />
 						<ProximaText> Dice </ProximaText>
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('Slice')} style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/slice.jpg')} />
 						<ProximaText> Slice </ProximaText>
 					</TouchableOpacity>
 				</View>
 				<ProximaText style={styles.header}>Cook</ProximaText>
 				<View style={styles.row}>
-					<TouchableOpacity style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('FryEgg')} style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/fryegg.jpg')} />
 						<ProximaText> Fry an Egg </ProximaText>
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('Sear')} style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/sear.jpg')} />
 						<ProximaText> Sear a steak </ProximaText>
 					</TouchableOpacity>
 				</View>
 				<ProximaText style={styles.header}>Bake</ProximaText>
 				<View style={styles.row}>
-					<TouchableOpacity style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('SoftPeak')} style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/softpeak.jpg')} />
 						<ProximaText> Get a soft peak </ProximaText>
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('FrostCake')} style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/howtos/frostcake.jpg')} />
 						<ProximaText> Frost a cake </ProximaText>
 					</TouchableOpacity>
