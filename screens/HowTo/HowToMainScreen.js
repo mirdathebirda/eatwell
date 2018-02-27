@@ -9,6 +9,7 @@ export default class HowToMainScreen extends React.Component {
   };
 
   render() {
+		//TODO: dix this so it doesn't only navigate to routes in TabNavigators only
 		const { navigate } = this.props.navigation; //used to link to other pages
 
     return (

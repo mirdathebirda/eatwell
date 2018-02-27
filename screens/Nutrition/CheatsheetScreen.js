@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
@@ -11,13 +11,26 @@ export default class CheatsheetScreen extends React.Component {
   };
 
   render() {
+		//TODO: dix this so it doesn't only navigate to routes in TabNavigators only
+		const { navigate } = this.props.navigation; //used to link to other pages
+
     return (
       <ScrollView style={styles.container}>
-				<ProximaText style={styles.articleb}> Correct Portion Sizes</ProximaText>
-				<ProximaText style={styles.articley}> Pick in produce season </ProximaText>
-				<ProximaText style={styles.articleb}> Is your meat done? </ProximaText>
-				<ProximaText style={styles.articley}> How long does food last in the fridge? </ProximaText>
-				<ProximaText style={styles.articleb}> Common Substitutions </ProximaText>
+				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+					<ProximaText style={styles.articleb}> Correct Portion Sizes</ProximaText>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+					<ProximaText style={styles.articley}> Pick in produce seaso}n </ProximaText>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+					<ProximaText style={styles.articleb}> Is your meat done? </ProximaText>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+					<ProximaText style={styles.articley}> How long does food last in the fridge? </ProximaText>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+					<ProximaText style={styles.articleb}> Common Substitutions </ProximaText>
+				</TouchableOpacity>
       </ScrollView>
     );
   }
