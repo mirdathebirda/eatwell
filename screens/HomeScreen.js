@@ -11,7 +11,7 @@ import {
 import { WebBrowser } from 'expo';
 
 import Colors from '../constants/Colors';
-import { ProximaText } from '../components/StyledText';
+import { ProximaText, SunValleyText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -24,7 +24,7 @@ export default class HomeScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-				<ProximaText style={styles.header}> eatwell </ProximaText>
+				<SunValleyText style={styles.header}> eatwell </SunValleyText>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 					<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
 			      <Image style={styles.button} source={require('../assets/images/mealplanning.jpg')} />
