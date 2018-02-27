@@ -15,14 +15,26 @@ export default class NutritionMainScreen extends React.Component {
 		return (
 			<ScrollView style={styles.container}>
 				<ProximaText style={styles.header}> Frequently Viewed Articles </ProximaText>
-				<ProximaText style={styles.articleb}> 10 ways to make recipes healthier</ProximaText>
-				<ProximaText style={styles.articley}> Call a snack a meal, and you're less apt to overeat </ProximaText>
-				<ProximaText style={styles.articleb}> 8 eating habits you should cut right now </ProximaText>
+				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+					<ProximaText style={styles.articleb}> 10 ways to make recipes healthier</ProximaText>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigate('SnackAMeal')}>
+					<ProximaText style={styles.articley}> Call a snack a meal, and you're less apt to overeat </ProximaText>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigate('EightEatingHabits')}>
+					<ProximaText style={styles.articleb}> 8 eating habits you should cut right now </ProximaText>
+				</TouchableOpacity>
 
 				<ProximaText style={styles.header}> Newest Articles </ProximaText>
-				<ProximaText style={styles.articley}>How exercise can make for healthier fat</ProximaText>
-				<ProximaText style={styles.articleb}> Tips for improving your health</ProximaText>
-				<ProximaText style={styles.articley}>All about coffee</ProximaText>
+				<TouchableOpacity onPress={() => navigate('HealthierRecipes')}>
+					<ProximaText style={styles.articley}>How exercise can make for healthier fat</ProximaText>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigate('ImprovingHealth')}>
+					<ProximaText style={styles.articleb}> Tips for improving your health</ProximaText>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigate('AllAboutCoffee')}>
+					<ProximaText style={styles.articley}>All about coffee</ProximaText>
+				</TouchableOpacity>
 			</ScrollView>
 		);
 	}
