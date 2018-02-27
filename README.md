@@ -14,6 +14,8 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 * icons for tabs? -- esp eatwell icon!!
 * routing - why is it only for html links -.-"
 
+* helpful for adding in custom fonts: https://facebook.github.io/react-native/docs/text.html#limited-style-inheritance
+
 ## TO DO:
 ### Front End Work:
 * ✓ - Get main screens stubs set up
