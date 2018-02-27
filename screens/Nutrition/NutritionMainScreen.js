@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
@@ -12,10 +12,12 @@ export default class NutritionMainScreen extends React.Component {
   };
 
 	render() {
+		const { navigate } = this.props.navigation; //used to link to other pages
+
 		return (
 			<ScrollView style={styles.container}>
 				<ProximaText style={styles.header}> Frequently Viewed Articles </ProximaText>
-				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+				<TouchableOpacity onPress={() => navigate('NutritionPages/HealthierRecipes')}>
 					<ProximaText style={styles.articleb}> 10 ways to make recipes healthier</ProximaText>
 				</TouchableOpacity>
 				<TouchableOpacity onPress={() => navigate('SnackAMeal')}>
@@ -26,7 +28,7 @@ export default class NutritionMainScreen extends React.Component {
 				</TouchableOpacity>
 
 				<ProximaText style={styles.header}> Newest Articles </ProximaText>
-				<TouchableOpacity onPress={() => navigate('HealthierRecipes')}>
+				<TouchableOpacity onPress={() => navigate('ExerciseFat')}>
 					<ProximaText style={styles.articley}>How exercise can make for healthier fat</ProximaText>
 				</TouchableOpacity>
 				<TouchableOpacity onPress={() => navigate('ImprovingHealth')}>

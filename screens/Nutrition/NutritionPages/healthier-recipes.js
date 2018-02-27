@@ -2,23 +2,25 @@ import React from 'react';
 import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
+import { ProximaText } from '../../components/StyledText';
+
 
 
 export default class HealthierRecipes extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={styles.header}> 10 ways to make recipes healthier</Text>
-				<Text> 1. Make creamy dishes without the cream </Text>
-				<Text> 2. Try cooking with less oil </Text>
-				<Text> 3. Get crispy “fried” food without the grease </Text>
-				<Text> 4. Amp up flavor without the salt shaker </Text>
-				<Text> 5. Use whole grains in baked goods</Text>
-				<Text> 6. Swap good fats for bad fats</Text>
-				<Text> 7. Go for egg whites in place of whole eggs </Text>
-				<Text> 8. Slim down homemade ice cream</Text>
-				<Text> 9. Add grains or vegetables to meaty dishes </Text>
-				<Text> 10. Reduce cheese, keep the flavor </Text>
+        <ProximaText style={styles.header}> 10 ways to make recipes healthier</ProximaText>
+				<ProximaText> 1. Make creamy dishes without the cream </ProximaText>
+				<ProximaText> 2. Try cooking with less oil </ProximaText>
+				<ProximaText> 3. Get crispy “fried” food without the grease </ProximaText>
+				<ProximaText> 4. Amp up flavor without the salt shaker </ProximaText>
+				<ProximaText> 5. Use whole grains in baked goods</ProximaText>
+				<ProximaText> 6. Swap good fats for bad fats</ProximaText>
+				<ProximaText> 7. Go for egg whites in place of whole eggs </ProximaText>
+				<ProximaText> 8. Slim down homemade ice cream</ProximaText>
+				<ProximaText> 9. Add grains or vegetables to meaty dishes </ProximaText>
+				<ProximaText> 10. Reduce cheese, keep the flavor </ProximaText>
       </ScrollView>
     );
   }

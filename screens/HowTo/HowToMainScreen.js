@@ -9,6 +9,8 @@ export default class HowToMainScreen extends React.Component {
   };
 
   render() {
+		const { navigate } = this.props.navigation; //used to link to other pages
+
     return (
       <ScrollView style={styles.container}>
 				<ProximaText style={styles.header}>Prep</ProximaText>
