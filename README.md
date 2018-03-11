@@ -52,7 +52,7 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 * Meal Plan
 	* Meal Plan Home Screen
 	* Grocery List
-	* Explore Recipes Screen
+	*  ✓ - Explore Recipes Screen
 	* Settings
 
 ### BackEnd Work
