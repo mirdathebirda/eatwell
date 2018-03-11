@@ -16,11 +16,11 @@ export default class CheatsheetScreen extends React.Component {
 
     return (
       <ScrollView style={styles.container}>
-				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+				{/* <TouchableOpacity onPress={() => navigate('MealPlanMain')}>
 					<ProximaText style={styles.articleb}> Correct Portion Sizes</ProximaText>
 				</TouchableOpacity>
 				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
-					<ProximaText style={styles.articley}> Pick in produce seaso}n </ProximaText>
+					<ProximaText style={styles.articley}> Pick in produce season </ProximaText>
 				</TouchableOpacity>
 				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
 					<ProximaText style={styles.articleb}> Is your meat done? </ProximaText>
@@ -29,8 +29,8 @@ export default class CheatsheetScreen extends React.Component {
 					<ProximaText style={styles.articley}> How long does food last in the fridge? </ProximaText>
 				</TouchableOpacity>
 				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
-					<ProximaText style={styles.articleb}> Common Substitutions </ProximaText>
-				</TouchableOpacity>
+					<ProximaText {styles.articleb}> Common Substitutions </ProximaText>
+				</TouchableOpacity> */}
       </ScrollView>
     );
   }

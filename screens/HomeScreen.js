@@ -60,8 +60,7 @@ const styles = StyleSheet.create({
 		height: 180,
 	},
 	header: {
-		// TODO: change to eatwell logo font
-		fontSize: 40,
+		fontSize: 50,
 		marginTop: 5,
 		marginBottom: 5,
 	},

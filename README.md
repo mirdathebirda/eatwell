@@ -27,8 +27,8 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 *
 
 * Home Screen
-	*  ✓ - add images
-	* fix styles
+	* ✓ - add images
+	* ✓ - fix styles
 	* remove the bottom navigation
 
 * How To
