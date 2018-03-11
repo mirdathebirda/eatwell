@@ -1,6 +1,7 @@
 import React from 'react';
-import { ExpoConfigView } from '@expo/samples';
+import { Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-native';
 import { ProximaText } from '../../components/StyledText';
+import { SearchBar } from 'react-native-elements'
 
 export default class HowToCompleteSkillsScreen extends React.Component {
   static navigationOptions = {
@@ -8,8 +9,19 @@ export default class HowToCompleteSkillsScreen extends React.Component {
   };
 
   render() {
-    /* Go ahead and delete ExpoConfigView and replace it with your
-     * content, we just wanted to give you a quick view of your config */
-    return <ExpoConfigView />;
-  }
+		return (
+      <ScrollView style={styles.container}>
+				<SearchBar lightTheme placeholder='Type Here...' />
+			</ScrollView>
+		);
+	}
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 15,
+		paddingBottom:50,
+    backgroundColor: '#fff',
+  },
+});
