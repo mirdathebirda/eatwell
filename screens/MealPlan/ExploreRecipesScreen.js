@@ -25,23 +25,23 @@ export default class ExploreRecipesScreen extends React.Component {
 					<ProximaText> This Week's Meal Plan </ProximaText>
 					<View style={styles.pcircles} >
 						<View style={styles.pcircle} >
-							<PercentageCircle borderWidth={5} radius={25} percent={50} color={Colors.navy}></PercentageCircle>
+							<PercentageCircle borderWidth={5} radius={25} percent={75} color={Colors.navy}></PercentageCircle>
 							<ProximaText> Carbs </ProximaText>
 						</View>
 						<View style={styles.pcircle} >
-							<PercentageCircle borderWidth={5} radius={25} percent={50} color={Colors.navy}></PercentageCircle>
+							<PercentageCircle borderWidth={5} radius={25} percent={54} color={Colors.navy}></PercentageCircle>
 							<ProximaText> Protein </ProximaText>
 						</View>
 						<View style={styles.pcircle} >
-							<PercentageCircle borderWidth={5} radius={25} percent={50} color={Colors.navy}></PercentageCircle>
+							<PercentageCircle borderWidth={5} radius={25} percent={92} color={Colors.navy}></PercentageCircle>
 							<ProximaText> Fat </ProximaText>
 						</View>
 						<View style={styles.pcircle} >
-							<PercentageCircle borderWidth={5} radius={25} percent={50} color={Colors.navy}></PercentageCircle>
+							<PercentageCircle borderWidth={5} radius={25} percent={33} color={Colors.navy}></PercentageCircle>
 							<ProximaText> Fiber </ProximaText>
 						</View>
 						<View style={styles.pcircle} >
-							<PercentageCircle borderWidth={5} radius={25} percent={50} color={Colors.navy}></PercentageCircle>
+							<PercentageCircle borderWidth={5} radius={25} percent={61} color={Colors.navy}></PercentageCircle>
 							<ProximaText> Iron </ProximaText>
 						</View>
 					</View>
