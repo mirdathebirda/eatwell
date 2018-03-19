@@ -36,6 +36,7 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 	* ✓ -  How To Completed
 	* Individual Screens
 	* Settings?
+	* add i've got it functionality
 
 		* Create functionality for "I got it" button -- should changed to (✓)
 		* ✓ - Map up markup for HowTos
@@ -57,6 +58,9 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 	*  ✓ - Explore Recipes Screen
 	* Settings
 	* Individual Screens
+	* Fix date
+	* Fix checkmarks
+
 
 ### BackEnd Work
 * Research on how to add a database

@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
   },
 	articleb: {
-		color: '#fff',
+		color: Colors.lemon,
 		backgroundColor: Colors.navy,
 		marginTop:5,
 		marginBottom: 5,
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
 	},
 	articley: {
 		backgroundColor: Colors.lemon,
+		color:  Colors.navy,
 		marginTop:5,
 		marginBottom: 5,
 		paddingTop: 15,
