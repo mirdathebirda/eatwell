@@ -21,10 +21,10 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 * ✓ - Get main screens stubs set up
 * ✓ - Figure out how to create a home screen and 3 tab navigation for mp, nutrition, and howtos
 * ✓ - Set up flow for the screens
-* Start working on styles for the screens (Nutrition and HT will be easier than MP)
+* ✓ - Start working on styles for the screens (Nutrition and HT will be easier than MP)
 * Look up how to do routing so the pages go to the right articles
-* Find and download assets used in Invision prototype (fonts,images)
-*
+* ✓ - Find and download assets used in Invision prototype (fonts,images)
+
 
 * Home Screen
 	* ✓ - add images
@@ -32,8 +32,9 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 	* remove the bottom navigation
 
 * How To
-	* How To Home
-	* How To Completed
+	* ✓ -  How To Home
+	* ✓ -  How To Completed
+	* Individual Screens
 	* Settings?
 
 		* Create functionality for "I got it" button -- should changed to (✓)
@@ -45,15 +46,17 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 	* ✓ - Cheatsheet
 	* Macros
 	* Settings
+	* Individual Screens
 
 		* ✓ - figure out basic style
 		* figure out routing to link to individual pages
 
 * Meal Plan
-	* Meal Plan Home Screen
-	* Grocery List
+	* ✓ - Meal Plan Home Screen
+	* ✓ - Grocery List
 	*  ✓ - Explore Recipes Screen
 	* Settings
+	* Individual Screens
 
 ### BackEnd Work
 * Research on how to add a database
