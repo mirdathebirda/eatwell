@@ -66,3 +66,12 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 ### To the End:
 * Figure out onboarding last -- will be hard to set up users
 * Work on Settings Page for all last -- not even sure what i want to include -- will require users and backend
+
+How to set state:
+`constructor(props){
+   super(props);
+
+   this.state = {
+      count: 0,
+   }
+}`

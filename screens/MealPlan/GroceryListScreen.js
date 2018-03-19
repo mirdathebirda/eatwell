@@ -2,36 +2,102 @@ import React from 'react';
 import { Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import { ProximaText } from '../../components/StyledText';
-
+import Colors from '../../constants/Colors';
+import { CheckBox } from 'react-native-elements';
 
 export default class GroceryListScreen extends React.Component {
   static navigationOptions = {
     title: 'Grocery List',
   };
 
+	constructor(){
+   super();
+
+   this.state = {
+      checked: false,
+   }
+	}
+
   render() {
+		const { checked } = this.state;
+
     return (
       <ScrollView style={styles.container}>
 				<ProximaText style={styles.header}> Produce </ProximaText>
-				<ProximaText style={styles.item}> 4oz broccoli </ProximaText>
-				<ProximaText style={styles.item}> 2 beefsteak tomatoes </ProximaText>
+				<CheckBox
+          title="4oz brocoli"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
+				<CheckBox
+          title="2 beefsteak tomatoes"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
 
 				<ProximaText style={styles.header}> Meat </ProximaText>
-				<ProximaText style={styles.item}> 1lb of chicken </ProximaText>
+				<CheckBox
+          title="1lb of chicken"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
 
 				<ProximaText style={styles.header}> Dairy </ProximaText>
-				<ProximaText style={styles.item}>1 cup buttermilk </ProximaText>
-				<ProximaText style={styles.item}> 1 large egg</ProximaText>
+				<CheckBox
+          title="1 cup buttermilk"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
+				<CheckBox
+          title="1 large egg"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
 
 				<ProximaText style={styles.header}>Dry/Baking Goods</ProximaText>
-				<ProximaText style={styles.item}> 1 cup Panko breadcrumbs </ProximaText>
-				<ProximaText style={styles.item}> 3/4 all-purpose flour </ProximaText>
-				<ProximaText style={styles.item}> 1/2 up cornstarch </ProximaText>
+				<CheckBox
+          title="1 cup Panko breadcrumbs"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
+				<CheckBox
+          title="3/4 all-purpose flour"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
+				<CheckBox
+          title=" 1/2 cup cornstarch"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
 
 				<ProximaText style={styles.header}>Spices and Sauces</ProximaText>
-				<ProximaText style={styles.item}>1/2 cup mayonaise</ProximaText>
-				<ProximaText style={styles.item}>1/4 cup sweet chili sauce</ProximaText>
-				<ProximaText style={styles.item}>1 tbsp hot sauce (Sriracha)</ProximaText>
+				<CheckBox
+          title="1/2 cup mayonaise"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
+				<CheckBox
+          title="1/4 cup sweet chili sauce"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
+				<CheckBox
+          title="1 tbsp hot sauce (Sriracha)"
+          checked={this.state.checked}
+					checkedColor={Colors.navy}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
 			</ScrollView>
     );
   }
