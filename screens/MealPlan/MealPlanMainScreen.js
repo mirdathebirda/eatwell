@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
 		flexDirection:'column',
 	},
 	item: {
-		marginTop: 10,
+		marginTop: 5,
 		marginRight:5,
 		marginLeft:5,
 		marginBottom:5,
@@ -166,6 +166,7 @@ const styles = StyleSheet.create({
 		marginBottom:5,
 	},
 	itemText: {
-
+		marginLeft:10,
+		marginTop:10,
 	},
 });
