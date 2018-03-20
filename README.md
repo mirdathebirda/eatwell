@@ -45,7 +45,7 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 	* ✓ - Nutrition Home
 	* ✓ - Articles
 	* ✓ - Cheatsheet
-	* Macros
+	* ✓ - Macros
 	* Settings
 	* Individual Screens
 

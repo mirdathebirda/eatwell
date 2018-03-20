@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, ScrollView, TextInput } from 'react-native';
+import { StyleSheet, ScrollView, TextInput, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
-import { CheckBox } from 'react-native-elements';
+import { Button, CheckBox } from 'react-native-elements';
 
 
 export default class MacroScreen extends React.Component {
@@ -49,20 +49,21 @@ export default class MacroScreen extends React.Component {
           onPress={() => this.setState({ checked: !this.state.checked })}
         />
 				<ProximaText style={styles.articleb}> Exercise Output </ProximaText>
-					<ProximaText> Days per week exercising</ProximaText>
-					<TextInput style={styles.textInput}
-				  keyboardType = 'numeric'
-				  // onChangeText = {(text)=> this.onChanged(text)}
-				  // value = {this.state.myNumber}
-					/>
-					<ProximaText> Minutes per day exercising</ProximaText>
-					<TextInput style={styles.textInput}
-				  keyboardType = 'numeric'
-				  // onChangeText = {(text)=> this.onChanged(text)}
-				  // value = {this.state.myNumber}
-					/>
+					<View style={styles.exerciseOutput}>
+						<ProximaText style={styles.exerciseOutputTitle}> Days per week exercising </ProximaText>
+						<TextInput style={styles.textInput}
+						keyboardType = 'numeric'
+						underlineColorAndroid='transparent'
+						/>
+					</View>
+					<View style={styles.exerciseOutput}>
+						<ProximaText style={styles.exerciseOutputTitle}> Minutes per day exercising</ProximaText>
+						<TextInput style={styles.textInput}
+						keyboardType = 'numeric'
+						underlineColorAndroid='transparent'
+						/>
+					</View>
 				<ProximaText style={styles.articley}> Goals </ProximaText>
-				<ProximaText style={styles.articley}> Describe your Daily Activity </ProximaText>
 				<CheckBox
           title="Lose Weight"
           checked={this.state.checked}
@@ -87,14 +88,18 @@ export default class MacroScreen extends React.Component {
 					checkedColor={Colors.navy}
           onPress={() => this.setState({ checked: !this.state.checked })}
         />
+
+				<Button title='CALCULATE' color='Colors.lemon'/>
+				<View style={styles.calculations}>
+					<ProximaText style={styles.calcField}></ProximaText>
+					<ProximaText style={styles.calcField}></ProximaText>
+					<ProximaText style={styles.calcField}></ProximaText>
+					<ProximaText style={styles.calcField}></ProximaText>
+					<ProximaText style={styles.calcField}></ProximaText>
+				</View>
       </ScrollView>
     );
   }
-
-	// onChanged(text) {
-	//   // code to remove non-numeric characters from text
-	//   this.setState({myNumber: text})
-	// }
 }
 
 const styles = StyleSheet.create({
@@ -125,7 +130,30 @@ const styles = StyleSheet.create({
 		paddingLeft: 5,
 		paddingRight: 5,
 	},
+	exerciseOutput: {
+		flexDirection:'row',
+		marginTop:5,
+		marginBottom:5,
+	},
+	exerciseOutputTitle: {
+		flex:3,
+	},
 	textInput: {
-
+		borderColor:'#000000',
+		borderWidth:0.8,
+		flex:1,
+	},
+	calculations: {
+		flexDirection:'row',
+	},
+	calcField: {
+		borderColor:'#000000',
+		borderWidth:0.8,
+		flex:1,
+		marginTop:15,
+		marginLeft:5,
+		marginRight:5,
+		marginBottom:15,
+		height:30,
 	},
 });
