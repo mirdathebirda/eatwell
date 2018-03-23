@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
 	},
 	calculations: {
 		flexDirection:'row',
+		marginBottom:15,
 	},
 	calcField: {
 		borderColor:'#000000',
