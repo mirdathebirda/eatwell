@@ -15,10 +15,8 @@ uuid(),
 1,
 false,
 '{"image1": "/assets/images/howtos/fryegg.jpg"}',
-'{"step1": "Heat 2 tbsp of butter in a skillet over a medium-high heat",
-  "step2": "Break an egg into the pan.",
-  "step3": "Cook until egg white is cooked through and yolk is cooked to your liking (it can be runny or completely firm)"
- }'
+'{"steps": ["Heat 2 tbsp of butter in a skillet over a medium-high heat","Break an egg into the pan.", "Cook until egg white is cooked through and yolk is cooked to your liking (it can be runny or completely firm)"]
+}'
 );
 
 -- TRUNCATE TABLE eatwell.howto; 
