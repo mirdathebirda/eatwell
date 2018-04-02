@@ -13,50 +13,54 @@
 -- 
 USE eatwell;
 
-INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,instructions,info,nutrition_info) 
-values(
-'Baked Chicken and Cheese Taquitos', uuid(), 30, 25, 55,
-'{"olive oil": [3,"tbsp"],
-  "onion":[1,"cup"],
-  "minced garlic":[2,"cloves"],
-  "cumin":[1 1/2,"tsp"],
-  "paprika":[1 1/2,"tsp"],
-  "salt":[1/4,"tsp"],
-  "black pepper":[1/4,"tsp"],
-  "rotisserie chicken":[3,"cups"],
-  "shredded cheddar or Mexican blend cheese":[1,"cup"],
-  "low sodium chicken broth":[1 1/2,"cups"],
-  "corn tortillas":[12],
-  "guacamole":["for serving",""],
-  "salsa":["for serving",""],
-}',
-'{ "instructions": [
-	"Preheat the oven to 425ºF and line a baking sheet with parchment paper.",
-    "In a large saucepan, heat the olive oil over medium heat. Add the diced onion and cook until its translucent, 3 to 5 minutes. Add the garlic, and cook, stirring occasionally, for about 3 minutes until its golden and fragrant.",
-    "Reduce the heat to low, and then add the lime juice, cumin, paprika, salt and black pepper to the pan, stirring to combine. Add the shredded chicken, tossing to combine.
-",
-    ],
-   "images":[]
-}',
-'{
-}'
-'{ "calories": 380, "protein":23, "fats": 20, "carbs":40 }'
-);
 
-INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,instructions,info,nutrition_info) 
+	INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,info,skills,nutrition_info) 
+	values(
+	'Baked Chicken and Cheese Taquitos', uuid(), 30, 25, 55,
+	'{"olive oil": [3,"tbsp"],
+	  "onion":[1,"cup"],
+	  "minced garlic":[2,"cloves"],
+	  "cumin":[1.5,"tsp"],
+	  "paprika":[1.5,"tsp"],
+	  "salt":[0.25,"tsp"],
+	  "black pepper":[0.25,"tsp"],
+	  "rotisserie chicken":[3,"cups"],
+	  "shredded cheddar or Mexican blend cheese":[1,"cup"],
+	  "low sodium chicken broth":[1.5,"cups"],
+	  "corn tortillas":[12],
+	  "guacamole":["for serving"," "],
+	  "salsa":["for serving"," "]
+	}',
+	'{ "instructions": [
+		"Preheat the oven to 425ºF and line a baking sheet with parchment paper.",
+		"In a large saucepan, heat the olive oil over medium heat. Add the diced onion and cook until its translucent, 3 to 5 minutes. Add the garlic, and cook, stirring occasionally, for about 3 minutes until its golden and fragrant.",
+		"Reduce the heat to low, and then add the lime juice, cumin, paprika, salt and black pepper to the pan, stirring to combine. Add the shredded chicken, tossing to combine."
+		],
+	   "images":["image"]
+	}',
+	'{"none": "none"
+	}',
+	'{ "calories": 380, "protein":23, "fats": 20, "carbs":40 
+	    
+	}'
+	);
+	
+	
+
+INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,info,skills,nutrition_info) 
 values(
 'Bang Bang Chicken', uuid(), 15, 15, 30,
-'{"mayonnaise": [1/2,"cup"],
-  "sweet chili sauce":[1/4,"cup"],
+'{"mayonnaise": [0.5,"cup"],
+  "sweet chili sauce":[0.25,"cup"],
   "hot sauce":[2,"tbsp"],
   "cumin":[1,"tbsp"],
   "honey":[2,"tbsp"],
-  "salt":["to taste",""],
-  "pepper":["to taste".""],
+  "salt":["to taste"," "],
+  "pepper":["to taste"," "],
   "skinless, boneless chicken breast":[4,"pieces"],
   "buttermilk":[1,"cup"],
-  "all purpose flour":[3/4,"cups],
-  "cornstarch":[1/2, "cup"],
+  "all purpose flour":[0.75,"cups"],
+  "cornstarch":[0.5, "cup"],
   "egg":[1, "large"],
   "garlic powder":[1, "tbsp"],
   "smoked paprika":[1, "tsp"],
@@ -71,26 +75,26 @@ values(
     "In a medium saucepan over medium heat, bring the chicken broth to a simmer. One at a time, dip each tortilla into the broth for 10 to 15 seconds, just until its pliable enough to roll. Transfer the tortilla to your work surface and place about 3 tablespoons of the chicken mixture on the lower third of each tortilla. Tightly roll up the tortilla, and then place it seam-side down on the prepared baking sheet. Repeat the filling and rolling process with the remaining tortillas.",
     "Bake the taquitos for 15 to 20 minutes until golden brown and crispy. Serve with guacamole and salsa."
     ],
-   "images":[],
+   "images":["image"]
 }',
-'{"Tell if your meat is done", "link",
-"Fry", "link"
+'{"Tell if your meat is done": "link",
+"Fry": "link"
 }',
 '{ "calories": 617, "protein":39.8, "fats": 26.4, "carbs":52.4 }'
 );
 
-INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,instructions,info,nutrition_info) 
+INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,info,skills,nutrition_info) 
 values(
 'Zucchini Turkey Bolognese', uuid(), 15, 15, 30,
 '{"olive oil": [3,"tbsp"],
   "minced garlic":[1,"tbsp"],
-  "small diced onion":[1/2,"cup"],
+  "small diced onion":[0.5,"cup"],
   "ground turkey":[1,"lb"],
   "crush tomatoes":[1,"can"],
   "tomato paste":[2,"tbsp"],
   "sugar":[2,"tsp"],
   "zucchini":[3, "medium"],
-  "parmesan cheese":["for serving", ""],
+  "parmesan cheese":["for serving", " "]
 }',
 '{ "instructions": [
 	"Add 2 tablespoons olive oil to a large sauté pan set over medium-low heat. Once the oil is warm, add the garlic and onions and cook, stirring constantly, until the garlic is golden and the onions are translucent, about 3 minutes.",
@@ -98,27 +102,27 @@ values(
     "Using a spiralizer, mandolin or vegetable peeler, cut the zucchini into noodles. Add the remaining 1 tablespoon olive oil to a large sauté pan set over medium-low heat. Add the zucchini noodles and cook them, tossing them constantly, for 2 minutes just until they’re wilted slightly. (Do not overcook the noodles or they will be soggy.)",
     "When ready to serve, plate the zucchini noodles, top them with the turkey bolognese and garnish with Parmesan cheese. Serve immediately."
     ],
-   "images":[],
+   "images":["image"]
 }',
-'{"Saute", "link",
-"Use a sprializer", "link"
+'{"Saute": "link",
+"Use a sprializer": "link"
 }',
 '{ "calories": 350, "protein":30, "fats": 19, "carbs":26 }'
 );
 
-INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,instructions,info,nutrition_info) 
+INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,info,skills,nutrition_info) 
 values(
 'Fluffy Greek Yogurt Pancakes', uuid(), 10, 5, 15,
 '{"whole wheat flour": [1,"cup"],
   "all purpose flour": [1,"cup"],
   "baking powder":[4,"tsp"],
-  "salt":[1/4,"tsp"],
-  "unsweetened almond milk (or any other variety of milk)":[1 1/2,"cups"],
+  "salt":[0.25,"tsp"],
+  "unsweetened almond milk (or any other variety of milk)":[1.5,"cups"],
   "eggs":[2,"large"],
   "vanilla extract":[2,"tsp"],
-  "plain 2% Greek yogurt":[1/2,"cup"],
-  "maple sytrup":["for serving",""],
-  "fruit":["for serving",""]
+  "plain 2% Greek yogurt":[0.5,"cup"],
+  "maple sytrup":["for serving"," "],
+  "fruit":["for serving"," "]
 }',
 '{ "instructions": [
 	"In a large bowl, whisk together the whole-wheat flour, all-purpose flour, baking powder, salt and sugar.",
@@ -126,7 +130,7 @@ values(
     "Heat a 12-inch nonstick skillet or griddle over medium heat and spray it well with nonstick cooking spray. Working in batches, spoon a quarter cup of the batter onto the pan for each pancake and cook just until bubbles form around the edges of each pancake, about 3 minutes. Flip and cook for 90 seconds more. Transfer the pancakes to a warm plate. Repeat with the remaining batter.",
     "Serve the pancakes topped with maple syrup and fruit."
     ],
-   "images":[],
+   "images":["image"]
 }',
 '{
 }',
@@ -134,16 +138,16 @@ values(
 );
 
 
-INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,instructions,info,nutrition_info) 
+INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,info,skills,nutrition_info) 
 values(
 'Baked Turkey Meatballs with Quinoa', uuid(), 10, 15, 25,
-'{"whole milk": [1/4,"cup"],
-  "breadcrumbs (Italian or plain)": [1/4,"cup"],
-  "ground turkey":[1 1/2,"lbs"],
+'{"whole milk": [0.25,"cup"],
+  "breadcrumbs (Italian or plain)": [0.25,"cup"],
+  "ground turkey":[1.5,"lbs"],
   "egg":[1,"large"],
   "minced garlic":[2,"tbsp"],
   "chopped parsley":[2,"tbsp"],
-  "parmesan cheese":[1/4,"cup"],
+  "parmesan cheese":[0.25,"cup"],
   "uncooked quinoa":[1,"cup"],
   "marinara sauce":[1,"cup"]
 }',
@@ -155,14 +159,14 @@ values(
     "While the meatballs bake, prepare the quinoa according to package directions. (See this video for tips on how to cook quinoa.)",
     "When ready to serve, divide the quinoa among plates then place the meatballs on top. Spoon the marinara sauce over the meatballs and garnish with grated Parmesan cheese."
     ],
-   "images":[],
+   "images":["image"]
 }',
 '{"How to cook quinoa":"link"
 }',
 '{ "calories": 310, "protein":35, "fats": 6, "carbs":25 }'
 );
 
-INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,instructions,info,nutrition_info) 
+INSERT INTO mealplan(title,id, prep_time,cook_time,total_time,ingredients,info,skills,nutrition_info) 
 values(
 'Sheet Pan Chicken Fajitas', uuid(), 15, 25, 40,
 '{"chicken breasts": [4,"medium"],
@@ -173,10 +177,10 @@ values(
   "red onion": [1,"large"],
   "garlic powder": [1,"tsp"],
   "ground cumin": [1,"tsp"],
-  "paprika": [1/2,"tsp"],
-  "chili powder": [1/4,"tsp"],
+  "paprika": [0.5,"tsp"],
+  "chili powder": [0.25,"tsp"],
   "olive oil": [2,"tbsp"],
-  "tortillas, guacamole, salsa, and cheese": ["for serving",""],
+  "tortillas, guacamole, salsa, and cheese": ["for serving",""]
 }',
 '{ "instructions": [
 	"Preheat oven to 400°F. Line a large baking sheet with foil and grease it with cooking spray.",
@@ -184,9 +188,11 @@ values(
     "In a small bowl, whisk together the garlic powder, ground cumin, paprika, chili powder, 1 teaspoon salt and 1/2 teaspoon pepper. Drizzle the chicken, peppers and onions with the olive oil then sprinkle on the seasoning and toss until well mixed. Arrange the mixture in a single layer on the baking sheet and bake for 20 to 25 minutes or until the chicken is cooked through.",
     "Remove the baking sheet from the oven and serve the fajitas with tortillas and your choice of toppings, such as guacamole, salsa, cheese and sour cream."
     ],
-   "images":[],
+   "images":["image"]
 }',
 '{"How to cook quinoa":"link"
 }',
 '{ "calories": 100, "protein":1, "fats": 7, "carbs":7 }'
 );
+
+SELECT * FROM mealplan;
