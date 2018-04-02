@@ -11,7 +11,7 @@
 
 USE eatwell;
 
-INSERT INTO nutrition(title,id,date_posted,read_state,times_viewed,last_viewed,body) 
+INSERT INTO eatwell.nutrition(title,id,category, date_posted,read_state,times_viewed,last_viewed,body) 
 values(
 '10 Ways to Make Recipes Healthier',
 uuid(),
@@ -32,7 +32,7 @@ false,
 10. Reduce cheese, keep the flavor"
 );
 
-INSERT INTO nutrition(title,id,date_posted,read_state,times_viewed,last_viewed,body) 
+INSERT INTO eatwell.nutrition(title,id,category, date_posted,read_state,times_viewed,last_viewed,body) 
 values(
 '8 eating habits you should cut right now',
 uuid(),
@@ -66,7 +66,7 @@ false,
 );
 
 
-INSERT INTO nutrition(title,id,date_posted,read_state,times_viewed,last_viewed,body) 
+INSERT INTO eatwell.nutrition(title,id,category, date_posted,read_state,times_viewed,last_viewed,body) 
 values(
 'All about coffee',
 uuid(),
@@ -108,7 +108,7 @@ false,
  "
 );
 
-INSERT INTO nutrition(title,id,date_posted,read_state,times_viewed,last_viewed,body) 
+INSERT INTO eatwell.nutrition(title,id,category, date_posted,read_state,times_viewed,last_viewed,body) 
 values(
 'How exercise can make for healthier fat',
 uuid(),
@@ -153,7 +153,7 @@ false,
  "
 );
 
-INSERT INTO nutrition(title,id,date_posted,read_state,times_viewed,last_viewed,body) 
+INSERT INTO eatwell.nutrition(title,id,category, date_posted,read_state,times_viewed,last_viewed,body) 
 values(
 'Tips for improving your health',
 uuid(),
@@ -199,7 +199,7 @@ false,
  "
 );
 
-INSERT INTO nutrition(title,id,date_posted,read_state,times_viewed,last_viewed,body) 
+INSERT INTO eatwell.nutrition(title,id,category, date_posted,read_state,times_viewed,last_viewed,body) 
 values(
 'Call a snack a meal, and you are less apt to overeat',
 uuid(),
@@ -208,14 +208,14 @@ uuid(),
 false,
 0,
 '1000-01-01 00:00:00',
- "  Labeling some foods as meals rather than snacks could cut down on overeating, a new study suggests. 
+ '  Labeling some foods as meals rather than snacks could cut down on overeating, a new study suggests. 
 	The research included 80 people who were asked to eat a pasta dish presented as either a snack (eaten standing up from a plastic pot with a plastic fork) or a meal (eaten seated at a table from a ceramic plate with a metal fork). 
 	After they ate the meals, the participants were invited to taste-test additional foods, such as animal crackers and M&Ms. 
 	Those who had eaten the pasta presented as a snack ate much more during the taste test than those who would have eaten the paste presented as a meal, according to the study, published online recently in the journal Appetite. 
 	"With our lives getting busier, increasing numbers of people are eating on the go and consuming foods that are labeled as "snacks"to sustain them," said study author Jane Ogden, a professor of health psychology at the University of Surrey, England. 
 	"What we have found is that those who are consuming snacks are more likely to overeat as they may not realize or even remember what they have eaten," she added in a university news release. 
 	"To overcome this, we should call our food a meal and eat it as meal, helping make us more aware of what we are eating so that we don not overeat later on," she suggested. 
- "
+ '
 );
 
 SELECT * FROM eatwell.nutrition;
