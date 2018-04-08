@@ -7,6 +7,14 @@ import { ProximaText } from '../../components/StyledText';
 
 
 export default class SoftPeak extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+       completed: false,
+    }
+  }
+  
   render() {
     return (
       <ScrollView style={styles.container}>

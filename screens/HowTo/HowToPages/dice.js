@@ -4,9 +4,15 @@ import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
 
-
-
 export default class Dice extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+       completed: false,
+    }
+  }
+
   render() {
     return (
       <ScrollView style={styles.container}>
