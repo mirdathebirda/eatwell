@@ -16,6 +16,11 @@ export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
+      navigationOptions: {
+        tabBar: ({ state }) => ({
+          visible: false
+        })
+      }
     },
     HowToMain: {
       screen: HowToMainScreen,

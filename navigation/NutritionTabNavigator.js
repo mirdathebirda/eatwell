@@ -18,6 +18,11 @@ export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
+      navigationOptions: {
+        tabBar: ({ state }) => ({
+          visible: false
+        })
+      }
     },
     NutritionMain: {
       screen: NutritionMainScreen,

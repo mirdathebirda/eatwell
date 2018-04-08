@@ -15,6 +15,11 @@ export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
+      navigationOptions: {
+        tabBar: ({ state }) => ({
+          visible: false
+        })
+      }
     },
     MealPlanMain: {
       screen: MealPlanMainScreen,
