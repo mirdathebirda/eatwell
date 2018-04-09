@@ -13,6 +13,7 @@ import CheatsheetScreen from '../screens/Nutrition/CheatsheetScreen';
 import MacroScreen from '../screens/Nutrition/MacroScreen';
 import NutritionSettingsScreen from '../screens/Nutrition/NutritionSettingsScreen';
 
+import NutritionMainNavigator from './NutritionPagesNavigation/NutritionMainNavigation';
 
 export default TabNavigator(
   {
@@ -23,7 +24,7 @@ export default TabNavigator(
       }
     },
     NutritionMain: {
-      screen: NutritionMainScreen,
+      screen: NutritionMainNavigator,
     },
     Articles: {
       screen: ArticleScreen,
