@@ -11,6 +11,7 @@ import HowToMainScreen from '../screens/HowTo/HowToMainScreen';
 import HowToCompleteSkillsScreen from '../screens/HowTo/HowToCompleteSkillsScreen';
 import HowToSettingsScreen from '../screens/HowTo/HowToSettingsScreen';
 
+import HowToMainNavigator from './HowTonPagesNavigation/HowToMainNavigation';
 
 export default TabNavigator(
   {
@@ -21,7 +22,7 @@ export default TabNavigator(
       }
     },
     HowToMain: {
-      screen: HowToMainScreen,
+      screen: HowToMainNavigator,
     },
     HowToCompleted: {
       screen: HowToCompleteSkillsScreen,
