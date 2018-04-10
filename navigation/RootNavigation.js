@@ -12,16 +12,20 @@ const RootStackNavigator = StackNavigator(
   {
 		MealPlan: {
       screen: MealPlanNavigator,
+      header: null,
     },
 		Nutrition: {
       screen: NutritionNavigator,
+      header: null,
     },
 		HowTo: {
       screen: HowToTabNavigator,
+      header: null,
     },
   },
   {
     navigationOptions: () => ({
+      header: null,
       headerTitleStyle: {
         fontWeight: 'normal',
 				//  TODO: changes default font for headers to proxima nova, but its throwing me
