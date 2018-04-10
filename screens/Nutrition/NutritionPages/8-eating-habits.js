@@ -7,6 +7,10 @@ import { ProximaText } from '../../../components/StyledText';
 
 
 export default class EightEatingHabits extends React.Component {
+  static navigationOptions = {
+    title: '8 eating habits you should cut right now',
+  };
+
   render() {
     return (
       <ScrollView style={styles.container}>

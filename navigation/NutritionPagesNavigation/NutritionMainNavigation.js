@@ -46,7 +46,7 @@ export default StackNavigator(
 				// https://docs.expo.io/versions/latest/guides/using-custom-fonts.html
 				// fontFamily:'ProximaNova-Regular',
       },
-      tabBarVisible: false,
+      tabBarVisible: true,
     }),
   }
 );
