@@ -22,7 +22,6 @@ const RootStackNavigator = StackNavigator(
   },
   {
     navigationOptions: () => ({
-      header: null,
       headerTitleStyle: {
         fontWeight: 'normal',
 				//  TODO: changes default font for headers to proxima nova, but its throwing me
