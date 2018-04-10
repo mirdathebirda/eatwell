@@ -40,6 +40,7 @@ export default StackNavigator(
   },
   {
     navigationOptions: () => ({
+      headerVisible: true,
       headerTitleStyle: {
         fontWeight: 'normal',
 				//  TODO: changes default font for headers to proxima nova, but its throwing me

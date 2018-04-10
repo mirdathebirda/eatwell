@@ -26,6 +26,7 @@ export default TabNavigator(
     NutritionMain: {
       screen: NutritionMainNavigator,
     },
+    // TODO: might need to link a screen navigator bc tab navigator doesn't have a header
     Articles: {
       screen: ArticleScreen,
     },
