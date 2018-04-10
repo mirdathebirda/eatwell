@@ -61,6 +61,11 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 	* Fix date
 	* ✓ - Fix checkmarks
 
+### navigation
+* get rid of back buttons
+* map out meal plan navigation
+* link up nutrition and how to
+* need to giure out how to use same navigation for article as nutrition main screen?  -- how does it just know which screen to use :| did i miss something （；￣Д￣）ノ
 
 ### BackEnd Work
 * Research on how to add a database
