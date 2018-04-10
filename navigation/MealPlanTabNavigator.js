@@ -21,6 +21,10 @@ export default TabNavigator(
     },
     MealPlanMain: {
       screen: MealPlanMainScreen,
+      // TODO: this too
+      // navigationOptions: {
+      //   header: null,
+      // }
     },
     GroceryList: {
       screen: GroceryListScreen,

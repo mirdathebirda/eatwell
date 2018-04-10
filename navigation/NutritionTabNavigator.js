@@ -26,7 +26,7 @@ export default TabNavigator(
     NutritionMain: {
       screen: NutritionMainNavigator,
       navigationOptions: {
-        headerVisible: false,
+        header: null,
       }
     },
     Articles: {

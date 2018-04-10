@@ -23,6 +23,9 @@ export default TabNavigator(
     },
     HowToMain: {
       screen: HowToMainNavigator,
+      navigationOptions: {
+        header: null,
+      }
     },
     HowToCompleted: {
       screen: HowToCompleteSkillsScreen,
