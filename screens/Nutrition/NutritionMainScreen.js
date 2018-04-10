@@ -18,7 +18,7 @@ export default class NutritionMainScreen extends React.Component {
 		return (
 			<ScrollView style={styles.container}>
 				<ProximaText style={styles.header}> Frequently Viewed Articles </ProximaText>
-				<TouchableOpacity onPress={() => navigate('NutritionPages/HealthierRecipes')}>
+				<TouchableOpacity onPress={() => navigate('HealthierRecipes')}>
 					<ProximaText style={styles.articleb}> 10 ways to make recipes healthier</ProximaText>
 				</TouchableOpacity>
 				<TouchableOpacity onPress={() => navigate('SnackAMeal')}>

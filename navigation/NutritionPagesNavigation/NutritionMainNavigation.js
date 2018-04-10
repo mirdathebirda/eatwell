@@ -4,7 +4,7 @@ import { Image } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import Colors from '../../constants/Colors';
-import EatwellIcon from './RootNavigation'
+import EatwellIcon from '../RootNavigation'
 
 import NutritionMainScreen from '../../screens/Nutrition/NutritionMainScreen';
 import EightEatingHabitsScreen from '../../screens/Nutrition/NutritionPages/8-eating-habits';
