@@ -79,3 +79,6 @@ How to set state:
       count: 0,
    }
 }`
+
+Database:
+https://github.com/expo/sqlite-example/blob/master/App.js
