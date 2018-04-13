@@ -106,10 +106,10 @@ export default class MacroScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-		flex: 1,
-    paddingTop: 15,
-		paddingLeft: 15,
-		paddingRight:15,
+    flex: 1,
+    paddingTop: 10,
+		paddingLeft: 10,
+		paddingRight:10,
     backgroundColor: '#fff',
   },
 	articleb: {

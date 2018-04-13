@@ -44,11 +44,11 @@ export default class ArticleScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-		flex: 1,
-		paddingTop: 15,
-		paddingLeft: 15,
-		paddingRight:15,
-		backgroundColor: '#fff',
+    flex: 1,
+    paddingTop: 10,
+		paddingLeft: 10,
+		paddingRight:10,
+    backgroundColor: '#fff',
   },
 	articleb: {
 		color: Colors.lemon,

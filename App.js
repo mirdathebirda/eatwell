@@ -42,6 +42,7 @@ export default class App extends React.Component {
         // We include SpaceMono because we use it in HomeScreen.js. Feel free
         // to remove this if you are not using it in your app
         'proxima-nova': require('./assets/fonts/ProximaNova-Regular.ttf'),
+        'proxima-nova-bold': require('./assets/fonts/ProximaNova-Bold.ttf'),
 				'sun-valley': require('./assets/fonts/SunValley-Demo.ttf'),
       }),
     ]);
