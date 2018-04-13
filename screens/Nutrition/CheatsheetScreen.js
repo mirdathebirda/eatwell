@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { TouchableOpacity, StyleSheet, ScrollView, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
@@ -15,23 +15,25 @@ export default class CheatsheetScreen extends React.Component {
 		const { navigate } = this.props.navigation; //used to link to other pages
 
     return (
-      <ScrollView style={styles.container}>
-				<TouchableOpacity onPress={() => navigate('CorrectPortionSizes')}>
-	        <ProximaText style={styles.articleb}> Correct Portion Sizes </ProximaText>
-				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('InSeasonProduce')}>
-					<ProximaText style={styles.articley}> Pick in season produce </ProximaText>
-				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('MealDone')}>
-					<ProximaText style={styles.articleb}> Is your meal done? </ProximaText>
-				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('LongFridge')}>
-					<ProximaText style={styles.articley}> How long does food list in the fridge? </ProximaText>
-				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('CommonSubstitutions')}>
-					<ProximaText style={styles.articleb}> Common Substitutions </ProximaText>
-				</TouchableOpacity>
-      </ScrollView>
+      <View style={styles.container}>
+        <ScrollView style={styles.container}>
+  				<TouchableOpacity onPress={() => navigate('CorrectPortionSizes')}>
+  	        <ProximaText style={styles.articleb}> Correct Portion Sizes </ProximaText>
+  				</TouchableOpacity>
+  				<TouchableOpacity onPress={() => navigate('InSeasonProduce')}>
+  					<ProximaText style={styles.articley}> Pick in season produce </ProximaText>
+  				</TouchableOpacity>
+  				<TouchableOpacity onPress={() => navigate('MealDone')}>
+  					<ProximaText style={styles.articleb}> Is your meal done? </ProximaText>
+  				</TouchableOpacity>
+  				<TouchableOpacity onPress={() => navigate('LongFridge')}>
+  					<ProximaText style={styles.articley}> How long does food list in the fridge? </ProximaText>
+  				</TouchableOpacity>
+  				<TouchableOpacity onPress={() => navigate('CommonSubstitutions')}>
+  					<ProximaText style={styles.articleb}> Common Substitutions </ProximaText>
+  				</TouchableOpacity>
+        </ScrollView>
+      </View>
     );
   }
 }

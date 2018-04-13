@@ -21,83 +21,85 @@ export default class MacroScreen extends React.Component {
 
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <ProximaText style={styles.articleb}> What are nutrition macros? </ProximaText>
-				<ProximaText style={styles.articley}> Describe your Daily Activity </ProximaText>
-				<CheckBox
-          title="Sedentary"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="Light Activity"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="Active"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="Very Active"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<ProximaText style={styles.articleb}> Exercise Output </ProximaText>
-					<View style={styles.exerciseOutput}>
-						<ProximaText style={styles.exerciseOutputTitle}> Days per week exercising </ProximaText>
-						<TextInput style={styles.textInput}
-						keyboardType = 'numeric'
-						underlineColorAndroid='transparent'
-						/>
-					</View>
-					<View style={styles.exerciseOutput}>
-						<ProximaText style={styles.exerciseOutputTitle}> Minutes per day exercising</ProximaText>
-						<TextInput style={styles.textInput}
-						keyboardType = 'numeric'
-						underlineColorAndroid='transparent'
-						/>
-					</View>
-				<ProximaText style={styles.articley}> Goals </ProximaText>
-				<CheckBox
-          title="Lose Weight"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="Lose 10%"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="Maintain"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="Gain Muscle"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
+      <View style={styles.container}>
+        <ScrollView style={styles.container}>
+          <ProximaText style={styles.articleb}> What are nutrition macros? </ProximaText>
+  				<ProximaText style={styles.articley}> Describe your Daily Activity </ProximaText>
+  				<CheckBox
+            title="Sedentary"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+  				<CheckBox
+            title="Light Activity"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+  				<CheckBox
+            title="Active"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+  				<CheckBox
+            title="Very Active"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+  				<ProximaText style={styles.articleb}> Exercise Output </ProximaText>
+  					<View style={styles.exerciseOutput}>
+  						<ProximaText style={styles.exerciseOutputTitle}> Days per week exercising </ProximaText>
+  						<TextInput style={styles.textInput}
+  						keyboardType = 'numeric'
+  						underlineColorAndroid='transparent'
+  						/>
+  					</View>
+  					<View style={styles.exerciseOutput}>
+  						<ProximaText style={styles.exerciseOutputTitle}> Minutes per day exercising</ProximaText>
+  						<TextInput style={styles.textInput}
+  						keyboardType = 'numeric'
+  						underlineColorAndroid='transparent'
+  						/>
+  					</View>
+  				<ProximaText style={styles.articley}> Goals </ProximaText>
+  				<CheckBox
+            title="Lose Weight"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+  				<CheckBox
+            title="Lose 10%"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+  				<CheckBox
+            title="Maintain"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+  				<CheckBox
+            title="Gain Muscle"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
 
-				<Button title='CALCULATE' color='Colors.lemon'/>
-				<View style={styles.calculations}>
-					<ProximaText style={styles.calcField}></ProximaText>
-					<ProximaText style={styles.calcField}></ProximaText>
-					<ProximaText style={styles.calcField}></ProximaText>
-					<ProximaText style={styles.calcField}></ProximaText>
-					<ProximaText style={styles.calcField}></ProximaText>
-				</View>
-      </ScrollView>
+  				<Button title='CALCULATE' color='Colors.lemon'/>
+  				<View style={styles.calculations}>
+  					<ProximaText style={styles.calcField}></ProximaText>
+  					<ProximaText style={styles.calcField}></ProximaText>
+  					<ProximaText style={styles.calcField}></ProximaText>
+  					<ProximaText style={styles.calcField}></ProximaText>
+  					<ProximaText style={styles.calcField}></ProximaText>
+  				</View>
+        </ScrollView>
+      </View>
     );
   }
 }
