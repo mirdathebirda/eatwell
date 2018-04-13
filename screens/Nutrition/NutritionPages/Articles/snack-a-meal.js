@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
-import Colors from '../../../constants/Colors';
-import { ProximaText } from '../../../components/StyledText';
+import Colors from '../../../../constants/Colors';
+import { ProximaText } from '../../../../components/StyledText';
 
 
 export default class SnackAMeal extends React.Component {

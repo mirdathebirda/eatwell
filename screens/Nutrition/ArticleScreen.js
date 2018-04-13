@@ -17,22 +17,22 @@ export default class ArticleScreen extends React.Component {
 
     return (
       <ScrollView style={styles.container}>
-				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+				<TouchableOpacity onPress={() => navigate('HealthierRecipes')}>
 	        <ProximaText style={styles.articleb}> 10 ways to make recipes healthier</ProximaText>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+				<TouchableOpacity onPress={() => navigate('SnackAMeal')}>
 					<ProximaText style={styles.articley}> Call a snack a meal, and you're less apt to overeat </ProximaText>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+				<TouchableOpacity onPress={() => navigate('EightEatingHabits')}>
 					<ProximaText style={styles.articleb}> 8 eating habits you should cut right now </ProximaText>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+				<TouchableOpacity onPress={() => navigate('ExerciseFat')}>
 					<ProximaText style={styles.articley}>How exercise can make for healthier fat</ProximaText>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+				<TouchableOpacity onPress={() => navigate('ImproveHealth')}>
 					<ProximaText style={styles.articleb}> Tips for improving your health</ProximaText>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigate('MealPlanMain')}>
+				<TouchableOpacity onPress={() => navigate('Coffee')}>
 					<ProximaText style={styles.articley}>All about coffee</ProximaText>
 				</TouchableOpacity>
       </ScrollView>

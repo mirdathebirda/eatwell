@@ -7,17 +7,29 @@ import Colors from '../../constants/Colors';
 import EatwellIcon from '../RootNavigation'
 
 import NutritionMainScreen from '../../screens/Nutrition/NutritionMainScreen';
-import EightEatingHabitsScreen from '../../screens/Nutrition/NutritionPages/8-eating-habits';
-import CoffeeScreen from '../../screens/Nutrition/NutritionPages/coffee';
-import ExerciseFatScreen from '../../screens/Nutrition/NutritionPages/exercise-fat';
-import HealthierRecipesScreen from '../../screens/Nutrition/NutritionPages/healthier-recipes';
-import SnackAMealScreen from '../../screens/Nutrition/NutritionPages/snack-a-meal';
-import ImproveHealthScreen from '../../screens/Nutrition/NutritionPages/improve-health';
+import ArticleMainScreen from '../../screens/Nutrition/ArticleScreen';
+import EightEatingHabitsScreen from '../../screens/Nutrition/NutritionPages/Articles/8-eating-habits';
+import CoffeeScreen from '../../screens/Nutrition/NutritionPages/Articles/coffee';
+import ExerciseFatScreen from '../../screens/Nutrition/NutritionPages/Articles/exercise-fat';
+import HealthierRecipesScreen from '../../screens/Nutrition/NutritionPages/Articles/healthier-recipes';
+import SnackAMealScreen from '../../screens/Nutrition/NutritionPages/Articles/snack-a-meal';
+import ImproveHealthScreen from '../../screens/Nutrition/NutritionPages/Articles/improve-health';
+
+import CheatsheetMainScreen from '../../screens/Nutrition/CheatsheetScreen';
+import CommonSubstitutionsScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/common-substitutions';
+import CorrectPortionSizesScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/correct-portion-sizes';
+import InSeasonProduceScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/in-season-produce';
+import LongFridgeScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/long-fridge';
+import MealDoneScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/meal-done';
+
 
 export default StackNavigator(
   {
-    Main: {
+    NutritionMain: {
       screen: NutritionMainScreen,
+    },
+    Article: {
+      screen: ArticleMainScreen,
     },
     EightEatingHabits: {
       screen: EightEatingHabitsScreen,
@@ -36,6 +48,24 @@ export default StackNavigator(
     },
     SnackAMeal: {
       screen: SnackAMealScreen,
+    },
+    Cheatsheet: {
+      screen: CheatsheetMainScreen,
+    },
+    CommonSubstitutions: {
+      screen: CommonSubstitutionsScreen,
+    },
+    CorrectPortionSizes: {
+      screen: CorrectPortionSizesScreen,
+    },
+    InSeasonProduce: {
+      screen: InSeasonProduceScreen,
+    },
+    LongFridge: {
+      screen: LongFridgeScreen,
+    },
+    MealDone: {
+      screen: MealDoneScreen,
     },
   },
   {

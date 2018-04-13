@@ -77,6 +77,8 @@ export default TabNavigator(
         );
       },
     }),
+    backTitle: null,
+    headerLeft: null,
     left: null,
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
