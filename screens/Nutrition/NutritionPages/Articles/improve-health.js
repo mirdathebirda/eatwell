@@ -23,6 +23,7 @@ export default class ImprovingHealth extends React.Component {
   				<ProximaText>Are you overweight?</ProximaText>
   				<ProximaText>Do you have questions about what foods you should eat or whether you should take vitamins?</ProximaText>
   				<ProximaText>Do you think that you would benefit from seeing a registered dietitian or someone who specializes in nutrition counseling? </ProximaText>
+
   				<ProximaText style={styles.header}> Path to improved health </ProximaText>
   				<ProximaText> It can be hard to change your eating habits. It helps if you focus on small changes. Making changes to your diet may also be beneficial if you have diseases that can be made worse by things you are eating or drinking. Symptoms from conditions such as kidney disease, lactose intolerance, and celiac disease can all benefit from changes in diet. Below are suggestions to improve your health. Be sure to stay in touch with your doctor so they know how you are doing.</ProximaText>
   				<ProximaText>
