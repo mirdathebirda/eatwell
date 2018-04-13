@@ -22,14 +22,14 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 * ✓ - Figure out how to create a home screen and 3 tab navigation for mp, nutrition, and howtos
 * ✓ - Set up flow for the screens
 * ✓ - Start working on styles for the screens (Nutrition and HT will be easier than MP)
-* Look up how to do routing so the pages go to the right articles
+* ✓ - Look up how to do routing so the pages go to the right articles - FINALLY GOT IT TO WORK ( •̀ᄇ• ́)ﻭ✧
 * ✓ - Find and download assets used in Invision prototype (fonts,images)
 
 
 * Home Screen
 	* ✓ - add images
 	* ✓ - fix styles
-	* remove the bottom navigation
+	* ✓✓ -  remove the bottom navigation
 
 * How To
 	* ✓ -  How To Home
@@ -50,7 +50,7 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 	* Individual Screens
 
 		* ✓ - figure out basic style
-		* figure out routing to link to individual pages
+		* ✓ - figure out routing to link to individual pages ಥ ೧ ಥ
 
 * Meal Plan
 	* ✓ - Meal Plan Home Screen
@@ -61,6 +61,11 @@ Enter URL (it can be found on the desktop client in the address bar next to the 
 	* Fix date
 	* ✓ - Fix checkmarks
 
+### navigation
+* get rid of back buttons
+* map out meal plan navigation
+* link up nutrition and how to
+* need to giure out how to use same navigation for article as nutrition main screen?  -- how does it just know which screen to use :| did i miss something （；￣Д￣）ノ
 
 ### BackEnd Work
 * Research on how to add a database
@@ -79,3 +84,6 @@ How to set state:
       count: 0,
    }
 }`
+
+Database:
+https://github.com/expo/sqlite-example/blob/master/App.js

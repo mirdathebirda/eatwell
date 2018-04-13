@@ -3,12 +3,16 @@ import { Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-nat
 import { ExpoLinksView } from '@expo/samples';
 import { ProximaText } from '../../components/StyledText';
 import { SearchBar } from 'react-native-elements'
+import Expo, { SQLite } from 'expo';
 
 
 export default class HowToMainScreen extends React.Component {
   static navigationOptions = {
     title: 'How Tos',
   };
+
+	//returns a database object
+	howto_db = Expo.SQLite.openDatabase('howto.db');
 
   render() {
 		//TODO: dix this so it doesn't only navigate to routes in TabNavigators only

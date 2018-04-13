@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
-import Colors from '../../constants/Colors';
-import { ProximaText } from '../../components/StyledText';
+import Colors from '../../../constants/Colors';
+import { ProximaText } from '../../../components/StyledText';
 
 
 
@@ -14,7 +14,7 @@ export default class SoftPeak extends React.Component {
        completed: false,
     }
   }
-  
+
   render() {
     return (
       <ScrollView style={styles.container}>

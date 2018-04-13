@@ -25,9 +25,10 @@ const RootStackNavigator = StackNavigator(
       headerTitleStyle: {
         fontWeight: 'normal',
 				//  TODO: changes default font for headers to proxima nova, but its throwing me
-				// https://docs.expo.io/versions/latest/guides/using-custom-fonts.html 
+				// https://docs.expo.io/versions/latest/guides/using-custom-fonts.html
 				// fontFamily:'ProximaNova-Regular',
       },
+      tabBarVisible: false,
     }),
   }
 );

@@ -11,14 +11,21 @@ import HowToMainScreen from '../screens/HowTo/HowToMainScreen';
 import HowToCompleteSkillsScreen from '../screens/HowTo/HowToCompleteSkillsScreen';
 import HowToSettingsScreen from '../screens/HowTo/HowToSettingsScreen';
 
+import HowToMainNavigator from './HowToPagesNavigation/HowToMainNavigation';
 
 export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
+      navigationOptions: {
+        tabBarVisible: false,
+      }
     },
     HowToMain: {
-      screen: HowToMainScreen,
+      screen: HowToMainNavigator,
+      navigationOptions: {
+        header: null,
+      }
     },
     HowToCompleted: {
       screen: HowToCompleteSkillsScreen,

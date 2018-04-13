@@ -15,9 +15,16 @@ export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
+      navigationOptions: {
+        tabBarVisible: false,
+      }
     },
     MealPlanMain: {
       screen: MealPlanMainScreen,
+      // TODO: this too
+      // navigationOptions: {
+      //   header: null,
+      // }
     },
     GroceryList: {
       screen: GroceryListScreen,

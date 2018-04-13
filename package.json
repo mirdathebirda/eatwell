@@ -11,11 +11,14 @@
     "@expo/samples": "2.1.1",
     "auth0-js": "^9.3.3",
     "expo": "^25.0.0",
+    "npm": "^5.8.0",
     "react": "16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "react-native-elements": "^0.19.0",
     "react-native-percentage-circle": "^1.0.6",
-    "react-navigation": "^1.5.1"
+    "react-navigation": "^1.5.1",
+    "sqlite3": "^4.0.0",
+    "websql": "^0.4.4"
   },
   "devDependencies": {
     "jest-expo": "^25.1.0"

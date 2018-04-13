@@ -1,12 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
-import Colors from '../../constants/Colors';
-import { ProximaText } from '../../components/StyledText';
+import Colors from '../../../constants/Colors';
+import { ProximaText } from '../../../components/StyledText';
 
 
 
 export default class EightEatingHabits extends React.Component {
+  static navigationOptions = {
+    title: '8 eating habits you should cut right now',
+  };
+
   render() {
     return (
       <ScrollView style={styles.container}>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, StyleSheet, Text, ScrollView } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
-import Colors from '../../constants/Colors';
-import { ProximaText } from '../../components/StyledText';
+import Colors from '../../../constants/Colors';
+import { ProximaText } from '../../../components/StyledText';
 
 
 
@@ -24,8 +24,7 @@ export default class FryEgg extends React.Component {
 						2. Break and egg into the pan.
 						3. Cook until egg white is cooked through and yolk is cooked through to your liking (it can be runny or completely firm)
 					</ProximaText>
-					<Button title = "I've got it" color = Colors.lemon />
-
+					<Button title = "I've got it"/>
       </ScrollView>
     );
   }
