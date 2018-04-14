@@ -22,12 +22,12 @@ export default class FryEgg extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container}>
-          <Image style={{ width: Dimensions.get('window').width, height: 180}} source={{uri: 'https://ak9.picdn.net/shutterstock/videos/2891269/thumb/3.jpg'}} />
+          <Image style={{ width: Dimensions.get('window').width, height: 180, marginBottom: 15}} source={{uri: 'https://ak9.picdn.net/shutterstock/videos/2891269/thumb/3.jpg'}} />
   				<ProximaText style={styles.paragraph}> 1. Heat 2 tbsp of butter in a skillet over a medium-high heat. </ProximaText>
   				<ProximaText style={styles.paragraph}> 2. Break and egg into the pan. </ProximaText>
   				<ProximaText style={styles.paragraph}> 3. Cook until egg white is cooked through and yolk is cooked through to your liking (it can be runny or completely firm) </ProximaText>
   				<Button title='Ive got it!' color='#293753'/>
-          {/*  TODO: write add on press functionality and styles for the button */}
+          {/*  TODO: change this stupid thing to touchable opacity bc buttons are a stupid piece of shit write add on press functionality and styles for the button */}
         </ScrollView>
       </View>
     );
