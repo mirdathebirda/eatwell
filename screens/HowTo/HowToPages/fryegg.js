@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, StyleSheet, Text, ScrollView } from 'react-native';
+import { Button, Dimensions, Image, StyleSheet, Text, ScrollView, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../../constants/Colors';
 import { ProximaText } from '../../../components/StyledText';
@@ -7,6 +7,10 @@ import { ProximaText } from '../../../components/StyledText';
 
 
 export default class FryEgg extends React.Component {
+  static navigationOptions = {
+    title: 'Fry an Egg',
+  };
+
   constructor(props){
     super(props);
 
@@ -16,16 +20,16 @@ export default class FryEgg extends React.Component {
   }
   render() {
     return (
-      <ScrollView style={styles.container}>
-  				<ProximaText> FryEgg </ProximaText>
-					<ProximaText>
- 						Written Instructions
-						1. Heat 2 tbsp of butter in a skillet over a medium-high heat.
-						2. Break and egg into the pan.
-						3. Cook until egg white is cooked through and yolk is cooked through to your liking (it can be runny or completely firm)
-					</ProximaText>
-					<Button title = "I've got it"/>
-      </ScrollView>
+      <View style={styles.container}>
+        <ScrollView style={styles.container}>
+          <Image style={{ width: Dimensions.get('window').width, height: 180}} source={{uri: 'https://ak9.picdn.net/shutterstock/videos/2891269/thumb/3.jpg'}} />
+  				<ProximaText style={styles.paragraph}> 1. Heat 2 tbsp of butter in a skillet over a medium-high heat. </ProximaText>
+  				<ProximaText style={styles.paragraph}> 2. Break and egg into the pan. </ProximaText>
+  				<ProximaText style={styles.paragraph}> 3. Cook until egg white is cooked through and yolk is cooked through to your liking (it can be runny or completely firm) </ProximaText>
+  				<Button title='Ive got it!' color='#293753'/>
+          {/*  TODO: write add on press functionality and styles for the button */}
+        </ScrollView>
+      </View>
     );
   }
 }
@@ -43,4 +47,9 @@ const styles = StyleSheet.create({
 		marginTop: 5,
 		marginBottom: 5,
 	},
+  paragraph: {
+    fontSize: 15,
+    marginTop:3,
+    marginBottom:3,
+  },
 });
