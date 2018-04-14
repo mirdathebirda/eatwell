@@ -20,7 +20,7 @@ import CommonSubstitutionsScreen from '../../screens/Nutrition/NutritionPages/Ch
 import CorrectPortionSizesScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/correct-portion-sizes';
 import InSeasonProduceScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/in-season-produce';
 import LongFridgeScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/long-fridge';
-import MealDoneScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/meal-done';
+import MeatDoneScreen from '../../screens/Nutrition/NutritionPages/Cheatsheets/meat-done';
 
 
 export default StackNavigator(
@@ -64,8 +64,8 @@ export default StackNavigator(
     LongFridge: {
       screen: LongFridgeScreen,
     },
-    MealDone: {
-      screen: MealDoneScreen,
+    MeatDone: {
+      screen: MeatDoneScreen,
     },
   },
   {

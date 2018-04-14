@@ -1,46 +1,82 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView } from 'react-native';
+import { StyleSheet, Text, ScrollView, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../../../constants/Colors';
-import { ProximaText } from '../../../../components/StyledText';
+import { ProximaText, ProximaTextBold } from '../../../../components/StyledText';
 
 
 
 export default class CommonSubstitutions extends React.Component {
   static navigationOptions = {
-    title: 'Correct Portion Sizes',
+    title: 'Common Baking Substitutions',
   };
 
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <ProximaText style={styles.header}>8 eating habits you should cut right now</ProximaText>
-				<ProximaText>No one eats perfectly all the time – even dietitians! But when bad habits become common practice, you can end up with weight gain, high cholesterol, high blood pressure and a host of other potential health problems. So which lousy habits are getting folks into trouble? Here are the top 10 faux pas on our hit list, and how to avoid them. How many are part of your regular routine?</ProximaText>
-				<ProximaText> 1: Poor Meal Planning </ProximaText>
-				<ProximaText> According to our readers, “time” is one of the biggest barriers to healthy eating, but last-minute decisions often lead to fast-food drive thrus and pizza delivery. Taking a few minutes to plan out weekly meals before shopping for the week will save you money, calories,  and time in the long run.
-				</ProximaText>
+      <View style={styles.container}>
+        <ScrollView style={styles.container}>
+          <ProximaTextBold style={styles.header}>Baking Powder </ProximaTextBold>
+          <ProximaText> 1 teaspoon baking powder = ¼ teaspoon baking soda + ½ teaspoon cream of tartar + ¼ teaspoon cornstarch </ProximaText>
 
-				<ProximaText> 2: Too Many Meals Away From Home </ProximaText>
-				<ProximaText> Restaurants and take-out will always mean super-sized portions, along with more calories and sodium. Make the effort to prepare meals at home most nights of the week and use our tips when you do venture out.</ProximaText>
+          <ProximaTextBold style={styles.header}> Baking Soda </ProximaTextBold>
+          <ProximaText> ½ teaspoon baking soda = 2 teaspoon baking powder </ProximaText>
 
-				<ProximaText> 3: Too Many Processed Foods</ProximaText>
-				<ProximaText> Salty and fatty convenience foods that have been stripped of nutrients are everywhere you turn. Opt for mostly fresh and whole foods and read labels to help make the smartest choices when you do go for more highly processed goods.</ProximaText>
+          <ProximaTextBold style={styles.header}> Butter </ProximaTextBold>
+          <ProximaText> 1 cup salted butter = 1 cup margarine </ProximaText>
+          <ProximaText> 1 cup salted butter = 1 cup vegetable shortening + ½ teaspoon salt </ProximaText>
+          <ProximaText> 1 cup salted butter = 7/8 cup lard + ½ teaspoon salt </ProximaText>
+          <ProximaText> 1 cup unsalted butter = 1 cup salted butter = 1 cup vegetable shortening = 1 cup lard *minus* ½ teaspoon salt from recipe </ProximaText>
 
-				<ProximaText> 4: Too Much Added Sugar</ProximaText>
-				<ProximaText> Aside from the candies, cookies and soda that Americans already eat too much of, sugar is lurking in places you might not expect, like whole grain cereals, salad dressings, condiments and breads. Take inventory of the total sugar in your diet and find ways to cut back on those empty calories.</ProximaText>
+          <ProximaTextBold style={styles.header}> Buttermilk </ProximaTextBold>
+          <ProximaText> 1 cup buttermilk = 1 tablespoon lemon juice or white vinegar + enough milk to make 1 cup. Let stand for 5 minutes </ProximaText>
+          <ProximaText> 1 cup buttermilk = 1 cup plain yogurt </ProximaText>
 
-				<ProximaText> 5. Mindless Eating</ProximaText>
-				<ProximaText> Instead of just eating when hungry, many of us grab food when we’re bored, tired, stressed, happy, sad – you name it! Check out our tips for eating smart and for the right reasons.</ProximaText>
+          <ProximaTextBold style={styles.header}> Cake Flour </ProximaTextBold>
+          <ProximaText> 1 cup cake flour =  ¾ cup sifted all-purpose flour + 2 tablespoons cornstarch </ProximaText>
 
-				<ProximaText> 6. Not Eating Together</ProximaText>
-				<ProximaText> Along the same lines as eating mindlessly comes eating while distracted, over-scheduled and in multiple shifts. Turn off the TV (and yes, even the computer and cell phone) at meals and make time to eat as a family as much as possible.</ProximaText>
+          <ProximaTextBold style={styles.header}> Chocolate </ProximaTextBold>
+          <ProximaText> 1 ounce unsweetened chocolate = 3 tablespoons natural unsweetened cocoa powder + 1 tablespoon unsalted butter, vegetable oil or shortening </ProximaText>
 
-				<ProximaText> 7: Eating on the Run</ProximaText>
-				<ProximaText> Leaving the house for a busy day without packed snacks or meals sets the stage for diet disaster. You’ll resort to meals that are too processed, too heavy, and too much on your waistline.</ProximaText>
+          <ProximaTextBold style={styles.header}> Cocoa Powder </ProximaTextBold>
+          <ProximaText> 3 tablespoons natural unsweetened cocoa powder = 1 ounce unsweetened chocolate + reduce fat in recipe by 1 tablespoon </ProximaText>
+          <ProximaText> 3 tablespoons Dutch-process cocoa powder = 3 tablespoons natural unsweetened cocoa powder + ⅛ teaspoon baking soda </ProximaText>
 
-				<ProximaText> 8: Giant Portion Sizes</ProximaText>
-				<ProximaText> You think you can eyeball portions but have you ever really measured out your morning cereal, spoonfuls of peanut butter or olive oil for cooking? Overdoing portions (even with healthy foods) can cause a calorie overload. Just do it a few times to give yourself some perspective. </ProximaText>
-      </ScrollView>
+          <ProximaTextBold style={styles.header}> Eggs </ProximaTextBold>
+          <ProximaText> 1 egg = ¼ cup applesauce </ProximaText>
+          <ProximaText> 1 egg = 1 tablespoons ground flaxseed + 3 tablespoons water </ProximaText>
+          <ProximaText> 1 egg = ¼ cup silken tofu pureed </ProximaText>
+          <ProximaText> 1 egg = 3 tablespoons mayonnaise </ProximaText>
+          <ProximaText>1 egg = ½ banana mashed with ½ teaspoon baking powder </ProximaText>
+
+          <ProximaTextBold style={styles.header}> Half-and-Half </ProximaTextBold>
+          <ProximaText> 1 cup half-and-half = ½ cup whole milk + ½ cup heavy cream </ProximaText>
+
+          <ProximaTextBold style={styles.header}> Milk </ProximaTextBold>
+          <ProximaText> 1 cup whole milk = ½ cup evaporated milk + ½ cup water </ProximaText>
+          <ProximaText> 1 cup whole milk = 1 cup skim milk + 2 tablespoons melted butter or margarine </ProximaText>
+
+          <ProximaTextBold style={styles.header}> Pumpkin Pie Spice </ProximaTextBold>
+          <ProximaText> 1 teaspoon pumpkin pie spice = ½ teaspoon ground cinnamon + ¼ teaspoon ground ginger + 1/8 teaspoon ground allspice + 1/8 teaspoon ground nutmeg </ProximaText>
+
+          <ProximaTextBold style={styles.header}> Sour Cream </ProximaTextBold>
+          <ProximaText> 1 cup sour cream = 1 cup plain yogurt </ProximaText>
+
+          <ProximaTextBold style={styles.header}> Vanilla Beans </ProximaTextBold>
+          <ProximaText> 1 vanilla bean = 2½ teaspoons vanilla extract </ProximaText>
+
+          <ProximaTextBold style={styles.header}> Vegetable Oil </ProximaTextBold>
+          <ProximaText> 1 cup vegetable oil = 1 cup applesauce = 1 cup fruit puree </ProximaText>
+
+          <ProximaTextBold style={styles.header}> Vegetable Shortening </ProximaTextBold>
+          <ProximaText> 1 cup vegetable shortening = 1 cup butter </ProximaText>
+          <ProximaText> 1 cup vegetable shortening = 1 cup margarine </ProximaText>
+
+          <ProximaTextBold style={styles.header}> Yeast </ProximaTextBold>
+          <ProximaText> 1 envelope (¼-ounce) active dry yeast = 2¼ teaspoons active dry yeast </ProximaText>
+          <ProximaText> 1 envelope (¼-ounce) active dry yeast = 2¼ teaspoons rapid-rise yeast </ProximaText>
+          <ProximaText> 1 envelope (¼-ounce) active dry yeast = ⅓ of a 2-ounce cake yeast </ProximaText>
+        </ScrollView>
+      </View>
     );
   }
 }

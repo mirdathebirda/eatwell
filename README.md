@@ -85,5 +85,10 @@ How to set state:
    }
 }`
 
+Get Screen Dimensions:
+`import { Dimensions }  from 'react-native'`
+`width: Dimensions.get('window').width,`
+`height: Dimensions.get('window').height`
+
 Database:
 https://github.com/expo/sqlite-example/blob/master/App.js
