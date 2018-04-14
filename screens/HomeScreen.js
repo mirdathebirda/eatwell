@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
 		height: 180,
 	},
 	header: {
+    color: Colors.navy,
 		fontSize: 50,
 		marginTop: 5,
 		marginBottom: 5,
