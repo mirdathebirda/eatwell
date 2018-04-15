@@ -12,26 +12,84 @@ export default class ChickenTacoAvocado extends React.Component {
     title: 'Chicken Taco Avocado'
   };
 
+  constructor(props){
+    super(props);
+
+    this.state = {
+      carbs: 80,
+      protein:7,
+      fat:5,
+      fiber:2,
+      prepTime:'10 mins',
+      cookTime:'25 mins',
+      totalTime: '35 mins',
+      ingredients: [
+      {
+        name: 'eggs',
+        measurement: 'large',
+        quantity: 12,
+      },
+      {
+        name: 'nonfat milk',
+        measurement: 'cup',
+        quantity: (1/3).toFixed(2),
+      },
+      {
+        name: 'cherry tomatoes',
+        measurement: 'cup',
+        quantity: (3/4).toFixed(2),
+      },
+      {
+        name: 'onions',
+        measurement: 'cup',
+        quantity: (1/2).toFixed(2),
+      },
+      {
+        name: 'avocado',
+        measurement: '',
+        quantity: '',
+      },
+      {
+        name: 'salsa',
+        measurement: '',
+        quantity: '',
+      },
+      {
+        name: 'crumbled toija or feta cheese',
+        measurement: '',
+        quantity: '',
+      },
+      ],
+    }
+  }
+
   render() {
+    var ingredientsList = [];
+    for (let i = 0; i < this.state.ingredients.length; i++) {
+      ingredientsList.push(
+        <ProximaText key={i}>     {this.state.ingredients[i].quantity} {this.state.ingredients[i].name} {this.state.ingredients[i].measurement}
+        </ProximaText>
+    )}
+
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container}>
           <View style = {styles.mealplanBar}>
             <View style={styles.nutritionFacts} >
               <View style={styles.nutritionFact} >
-                <ProximaText style={styles.nutritionFactText} > 80 </ProximaText>
+                <ProximaText style={styles.nutritionFactText} > {this.state.carbs} </ProximaText>
                 <ProximaText style={styles.nutritionFactText} > Carbs </ProximaText>
               </View>
               <View style={styles.nutritionFact} >
-                <ProximaText style={styles.nutritionFactText}> 7 </ProximaText>
+                <ProximaText style={styles.nutritionFactText}> {this.state.protein} </ProximaText>
                 <ProximaText style={styles.nutritionFactText}> Protein </ProximaText>
               </View>
               <View style={styles.nutritionFact} >
-                <ProximaText style={styles.nutritionFactText}> 5 </ProximaText>
+                <ProximaText style={styles.nutritionFactText}> {this.state.fat} </ProximaText>
                 <ProximaText style={styles.nutritionFactText}> Fat </ProximaText>
               </View>
               <View style={styles.nutritionFact} >
-                <ProximaText style={styles.nutritionFactText}> 2 </ProximaText>
+                <ProximaText style={styles.nutritionFactText}> {this.state.fiber} </ProximaText>
                 <ProximaText style={styles.nutritionFactText}> Fiber </ProximaText>
               </View>
               <View style={styles.nutritionFact} >
@@ -40,29 +98,23 @@ export default class ChickenTacoAvocado extends React.Component {
               </View>
             </View>
           </View>
-           <Image style={{ width: Dimensions.get('window').width, height: 180, marginBottom: 15}} source={require('../../../assets/images/recipes/eggmuffin.png')} />
+           <Image style={{ width: Dimensions.get('window').width, height: 180, marginBottom: 15}} source={require('../../../assets/images/recipes/chickentacoavocado.png')} />
          <View style={styles.mealTimes}>
            <View style={styles.mealTime}>
              <ProximaTextBold style={styles.mealTimeText}> Prep Time </ProximaTextBold>
-             <ProximaText style={styles.mealTimeText}> 10 mins </ProximaText>
+             <ProximaText style={styles.mealTimeText}> {this.state.prepTime}</ProximaText>
            </View>
            <View style={styles.mealTime}>
              <ProximaTextBold style={styles.mealTimeText}> Cook Time </ProximaTextBold>
-             <ProximaText style={styles.mealTimeText}> 25 mins </ProximaText>
+             <ProximaText style={styles.mealTimeText}> {this.state.cookTime} </ProximaText>
            </View>
            <View style={styles.mealTime}>
              <ProximaTextBold style={styles.mealTimeText}> Total Time </ProximaTextBold>
-             <ProximaText style={styles.mealTimeText}> 35 mins </ProximaText>
+             <ProximaText style={styles.mealTimeText}> {this.state.totalTime} </ProximaText>
            </View>
          </View>
          <ProximaTextBold style={styles.header}> Ingredients </ProximaTextBold>
-         <ProximaText>      12 large eggs </ProximaText>
-         <ProximaText>      1/3 cup nonfat milk </ProximaText>
-         <ProximaText>      3/4 cup quartered cherry tomatoes </ProximaText>
-         <ProximaText>      1/2 cup diced onions </ProximaText>
-         <ProximaText>      sliced avocado, for serving </ProximaText>
-         <ProximaText>      salsa for serving </ProximaText>
-         <ProximaText>      crumbled toija or feta cheese, for serving </ProximaText>
+          {ingredientsList}
 
          <TouchableOpacity style={styles.button} >
            <ProximaText style={styles.buttonText}> Add to Meal Plan </ProximaText>
@@ -86,7 +138,6 @@ export default class ChickenTacoAvocado extends React.Component {
     )
   }
 }
-
 
 const styles = StyleSheet.create({
   button:{
@@ -131,14 +182,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   mealTime: {
-    textAlign: 'center',
     flexDirection: 'column',
-    fontSize:17,
     marginTop:5,
     marginBottom:5,
     width: Dimensions.get('window').width/3,
   },
   mealTimeText: {
+    // fontSize:17,
     textAlign: 'center',
   },
 	header: {
