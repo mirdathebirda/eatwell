@@ -13,6 +13,8 @@ export default class MealPlanMainScreen extends React.Component {
   };
 
 	render() {
+    const { navigate } = this.props.navigation; //used to link to other pages
+
 		return (
 			<ScrollView style={styles.container}>
 				<View style={styles.datebar}>
@@ -46,14 +48,14 @@ export default class MealPlanMainScreen extends React.Component {
 				<View style={styles.mealPlanMeals}>
 					<ProximaText style = {styles.header}> Breakfast </ProximaText>
 					<View style={styles.meals}>
-						<TouchableOpacity onPress={() => navigate('Dice')} style={styles.item}>
+						<TouchableOpacity onPress={() => navigate('EggMuffin')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/eggmuffin.png')} />
 							<View style={styles.itemText}>
 								<ProximaText>Healthy Breakfast Egg Muffins</ProximaText>
 								<ProximaText>Description of recipes </ProximaText>
 							</View>
 						</TouchableOpacity>
-						<TouchableOpacity onPress={() => navigate('Dice')} style={styles.item}>
+						<TouchableOpacity onPress={() => navigate('EggMuffin')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/eggmuffin.png')} />
 							<View style={styles.itemText}>
 								<ProximaText>Healthy Breakfast Egg Muffins</ProximaText>
@@ -63,14 +65,14 @@ export default class MealPlanMainScreen extends React.Component {
 					</View>
 					<ProximaText style = {styles.header}> Lunch/Dinner </ProximaText>
 					<View style={styles.meals}>
-						<TouchableOpacity onPress={() => navigate('Dice')} style={styles.item}>
+						<TouchableOpacity onPress={() => navigate('ChickenTacoAvocado')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/chickentacoavocado.png')} />
 							<View style={styles.itemText}>
 								<ProximaText>Chicken Taco Avocado</ProximaText>
 								<ProximaText>Description of recipes </ProximaText>
 							</View>
 						</TouchableOpacity>
-						<TouchableOpacity onPress={() => navigate('Dice')} style={styles.item}>
+						<TouchableOpacity onPress={() => navigate('ChickenTacoAvocado')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/chickentacoavocado.png')} />
 							<View style={styles.itemText}>
 								<ProximaText>Chicken Taco Avocado</ProximaText>
@@ -80,14 +82,14 @@ export default class MealPlanMainScreen extends React.Component {
 					</View>
 					<ProximaText style = {styles.header}> Snacks </ProximaText>
 					<View style={styles.meals}>
-						<TouchableOpacity onPress={() => navigate('Dice')} style={styles.item}>
+						<TouchableOpacity onPress={() => navigate('Granola')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/granola.png')} />
 							<View style={styles.itemText}>
 								<ProximaText>Granola</ProximaText>
 								<ProximaText>Description of recipes </ProximaText>
 							</View>
 						</TouchableOpacity>
-						<TouchableOpacity onPress={() => navigate('Dice')} style={styles.item}>
+						<TouchableOpacity onPress={() => navigate('Granola')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/granola.png')} />
 							<View style={styles.itemText}>
 								<ProximaText>Granola</ProximaText>

@@ -11,6 +11,9 @@ import GroceryListScreen from '../screens/MealPlan/GroceryListScreen';
 import ExploreRecipesScreen from '../screens/MealPlan/ExploreRecipesScreen';
 import MealPlanSettingsScreen from '../screens/MealPlan/MealPlanSettingsScreen';
 
+import MealPlanMainNavigator from './MealPlanPagesNavigation/ExploreRecipesNavigation';
+
+
 export default TabNavigator(
   {
     Home: {
@@ -20,11 +23,10 @@ export default TabNavigator(
       }
     },
     MealPlanMain: {
-      screen: MealPlanMainScreen,
-      // TODO: this too
-      // navigationOptions: {
-      //   header: null,
-      // }
+      screen: MealPlanMainNavigator,
+      navigationOptions: {
+        header: null,
+      }
     },
     GroceryList: {
       screen: GroceryListScreen,
