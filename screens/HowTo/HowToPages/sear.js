@@ -15,9 +15,11 @@ export default class Sear extends React.Component {
     super(props);
 
     this.state = {
-       completed: false,
+      buttonText: "I've got this!",
+      completed: false,
     }
   }
+  
   render() {
     return (
       <View style={styles.container}>
@@ -50,6 +52,15 @@ export default class Sear extends React.Component {
       </View>
     );
   }
+
+  // Function
+  onPress = () => {
+    this.setState({
+      buttonText:'✓',
+      completed: true,
+    })
+  }
+
 }
 
 const styles = StyleSheet.create({

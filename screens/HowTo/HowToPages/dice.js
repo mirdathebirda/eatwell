@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Dimensions, Image, StyleSheet, Text, ScrollView, View } from 'react-native';
+import { Button, Dimensions, Image, StyleSheet, Text, TouchableOpacity, ScrollView, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../../constants/Colors';
 import { ProximaText } from '../../../components/StyledText';
@@ -15,9 +15,11 @@ export default class Dice extends React.Component {
     super(props);
 
     this.state = {
-       completed: false,
+      buttonText: "I've got this!",
+      completed: false,
     }
   }
+
   render() {
     return (
       <View style={styles.container}>
@@ -28,15 +30,32 @@ export default class Dice extends React.Component {
           <ProximaText style={styles.paragraph}> 3. Cut into steaks: Cut the vegetables lengthwise into slices: 1/4-inch thick for small dice, 1/2-inch thick for medium dice, and 3/4-inch thick for large dice. </ProximaText>
           <ProximaText style={styles.paragraph}> 4. Cut into sticks: Stack the slices on top of each other and cut the slices lengthwise into sticks that are the same width as the slices. </ProximaText>
           <ProximaText style={styles.paragraph}> 5. Dice: Cut the sticks crosswise, again in the same width as the sticks, to produce dice.</ProximaText>
-  				<Button title='Ive got it!' color='#293753'/>
-          {/*  TODO: change this stupid thing to touchable opacity bc buttons are a stupid piece of shit write add on press functionality and styles for the button */}
+          <TouchableOpacity style={styles.button} onPress={this.onPress} >
+            <Text> {this.state.buttonText} </Text>
+          </TouchableOpacity>
         </ScrollView>
       </View>
     );
   }
+
+  // Function
+  onPress = () => {
+    this.setState({
+      buttonText:'✓',
+      completed: true,
+    })
+  }
 }
 
 const styles = StyleSheet.create({
+  button:{
+    backgroundColor: Colors.navy,
+    color: '#fff',
+    height: 20,
+    paddingTop:5,
+    paddingBottom:5,
+    textAlign:'center',
+  },
   container: {
 		flex: 1,
 		paddingTop: 15,

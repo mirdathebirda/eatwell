@@ -15,9 +15,11 @@ export default class FrostCake extends React.Component {
     super(props);
 
     this.state = {
-       completed: false,
+      buttonText: "I've got this!",
+      completed: false,
     }
   }
+    
   render() {
     return (
       <View style={styles.container}>
@@ -79,6 +81,14 @@ export default class FrostCake extends React.Component {
         </ScrollView>
       </View>
     );
+  }
+
+  // Function
+  onPress = () => {
+    this.setState({
+      buttonText:'✓',
+      completed: true,
+    })
   }
 }
 
