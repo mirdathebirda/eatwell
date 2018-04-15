@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
-import { ProximaText } from '../../components/StyledText';
+import { ProximaText,ProximaTextBold } from '../../components/StyledText';
 
 import PercentageCircle from 'react-native-percentage-circle';
 
@@ -46,7 +46,7 @@ export default class MealPlanMainScreen extends React.Component {
 					</View>
 				</View>
 				<View style={styles.mealPlanMeals}>
-					<ProximaText style = {styles.header}> Breakfast </ProximaText>
+					<ProximaTextBold style = {styles.header}> Breakfast </ProximaTextBold>
 					<View style={styles.meals}>
 						<TouchableOpacity onPress={() => navigate('EggMuffin')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/eggmuffin.png')} />
@@ -63,7 +63,7 @@ export default class MealPlanMainScreen extends React.Component {
 							</View>
 						</TouchableOpacity>
 					</View>
-					<ProximaText style = {styles.header}> Lunch/Dinner </ProximaText>
+					<ProximaTextBold style = {styles.header}> Lunch/Dinner </ProximaTextBold>
 					<View style={styles.meals}>
 						<TouchableOpacity onPress={() => navigate('ChickenTacoAvocado')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/chickentacoavocado.png')} />
@@ -80,7 +80,7 @@ export default class MealPlanMainScreen extends React.Component {
 							</View>
 						</TouchableOpacity>
 					</View>
-					<ProximaText style = {styles.header}> Snacks </ProximaText>
+					<ProximaTextBold style = {styles.header}> Snacks </ProximaTextBold>
 					<View style={styles.meals}>
 						<TouchableOpacity onPress={() => navigate('Granola')} style={styles.item}>
 			        <Image style={styles.image} source={require('../../assets/images/recipes/granola.png')} />
