@@ -24,44 +24,93 @@ export default class BangBangChicken extends React.Component {
       cookTime:'25 mins',
       totalTime: '35 mins',
       ingredients: [
-      {
-        name: 'eggs',
-        measurement: 'large',
-        quantity: 12,
-      },
-      {
-        name: 'nonfat milk',
-        measurement: 'cup',
-        quantity: (1/3).toFixed(2),
-      },
-      {
-        name: 'cherry tomatoes',
-        measurement: 'cup',
-        quantity: (3/4).toFixed(2),
-      },
-      {
-        name: 'onions',
-        measurement: 'cup',
-        quantity: (1/2).toFixed(2),
-      },
-      {
-        name: 'avocado',
-        measurement: '',
-        quantity: '',
-      },
-      {
-        name: 'salsa',
-        measurement: '',
-        quantity: '',
-      },
-      {
-        name: 'crumbled toija or feta cheese',
-        measurement: '',
-        quantity: '',
-      },
+        {
+          name: 'hot sauce (Sriracha)',
+          measurement: 'tbsp',
+          quantity: 2,
+        },
+        {
+          name: 'mayonnaise',
+          measurement: 'cup',
+          quantity: (1/2).toFixed(2),
+        },
+        {
+          name: 'sweet chili sauce',
+          measurement: 'cup',
+          quantity: (1/4).toFixed(2),
+        },
+        {
+          name: 'honey',
+          measurement: 'tbsp',
+          quantity: 2,
+        },
+        {
+          name: 'chicken breasts (boneless, skinless)',
+          measurement: '',
+          quantity: 4,
+        },
+        {
+          name: 'all purpose flour',
+          measurement: 'cup',
+          quantity: (3/4).toFixed(2),
+        },
+        {
+          name: 'cornstarch',
+          measurement: 'cup',
+          quantity: (1/2).toFixed(2),
+        },
+        {
+          name: 'garlic powder',
+          measurement: 'tbsp',
+          quantity: 1,
+        },
+        {
+          name: 'smoked paprika',
+          measurement: 'tsp',
+          quantity: 1,
+        },
+        {
+          name: 'salt',
+          measurement: 'tsp',
+          quantity: (1/2).toFixed(2),
+        },
+        {
+          name: 'pepper',
+          measurement: 'tsp',
+          quantity: (1/2).toFixed(2),
+        },
+        {
+          name: 'egg',
+          measurement: 'large',
+          quantity: 1,
+        },
+        {
+          name: 'buttermilk',
+          measurement: 'cup',
+          quantity: 1,
+        },
+        {
+          name: 'Panko breadcrumbs',
+          measurement: 'cup',
+          quantity: 1,
+        },
+        {
+          name: 'oil',
+          measurement: '',
+          quantity: '',
+        },
+      ],
+      instructions: [
+        '1. To prepare the sauce, mix all the ingredients for the sauce together in a bowl and refrigerate until ready for serving.',
+        '2. In a medium bowl, mix flour, cornstarch, garlic powder, smoked paprika, salt and pepper. To the bowl add the hot sauce, egg, buttermilk and whisk until you have a smooth batter. Add the chicken pieces to the bowl, toss to make sure each piece is coated in the batter and set aside.',
+        '3. In another bowl add about a cup of Panko breadcrumbs.',
+        '4. Add about 1/2 inch of oil in a large skillet and heat the oil over medium-high heat.',
+        '5. Coat each piece of chicken with breadcrumbs, add more breadcrumbs as needed, and fry on both sides for about 3 minutes or until chicken is cooked through. Place on paper napkins to soak up some of the oil. Repeat with all chicken pieces. Do not overcrowd the chicken, only add a few pieces of chicken to the skillet at a time, so the chicken turns out crispy.',
+        '6. Drizzle chicken with sauce and serve.',
       ],
     }
   }
+
 
   render() {
     var ingredientsList = [];
@@ -70,6 +119,13 @@ export default class BangBangChicken extends React.Component {
         <ProximaText key={i}>     {this.state.ingredients[i].quantity} {this.state.ingredients[i].name} {this.state.ingredients[i].measurement}
         </ProximaText>
     )}
+
+    const instructionsList = this.state.instructions.map((instruction) => {
+      return(
+        <ProximaText style={styles.paragraph} key={instruction}>     {instruction}
+        </ProximaText>
+      );
+    });
 
     return (
       <View style={styles.container}>
@@ -121,18 +177,7 @@ export default class BangBangChicken extends React.Component {
          </TouchableOpacity>
 
          <ProximaTextBold style={styles.header}> Instructions </ProximaTextBold>
-          <ProximaText style={styles.paragraph}>
-                  1. Preheat the overn to 350 degrees Farenheit. Grease a muffin pann with cooking spray.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  2. In a large bowl, whisk together the eggs, nonfat milk and 1.2 teaspoon pepper. Stir in the spinach, tomatoes and onions.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  3. Divide the mixture evenly between the 12 muffin pan cups and bake the muffin for 20 to 25 minutes, or until the egg is fully cooked. Remove the muffins from the over and let them cool for 5 minutes in the pan then use a knife to loosen the muffins from the cups.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  4. Top each muffin with sliced avocado, a follop of sala and a sprinkling of cheese then serve.
-          </ProximaText>
+          {instructionsList}
         </ScrollView>
       </View>
     )

@@ -16,49 +16,81 @@ export default class ChickenTacoAvocado extends React.Component {
     super(props);
 
     this.state = {
-      carbs: 80,
-      protein:7,
-      fat:5,
-      fiber:2,
-      prepTime:'10 mins',
-      cookTime:'25 mins',
-      totalTime: '35 mins',
+      carbs: 413,
+      protein:13,
+      fat:32,
+      fiber:16,
+      prepTime:'20 mins',
+      cookTime:'2 mins',
+      totalTime: '22 mins',
       ingredients: [
-      {
-        name: 'eggs',
-        measurement: 'large',
-        quantity: 12,
-      },
-      {
-        name: 'nonfat milk',
-        measurement: 'cup',
-        quantity: (1/3).toFixed(2),
-      },
-      {
-        name: 'cherry tomatoes',
-        measurement: 'cup',
-        quantity: (3/4).toFixed(2),
-      },
-      {
-        name: 'onions',
-        measurement: 'cup',
-        quantity: (1/2).toFixed(2),
-      },
-      {
-        name: 'avocado',
-        measurement: '',
-        quantity: '',
-      },
-      {
-        name: 'salsa',
-        measurement: '',
-        quantity: '',
-      },
-      {
-        name: 'crumbled toija or feta cheese',
-        measurement: '',
-        quantity: '',
-      },
+        {
+          name: 'black beans',
+          measurement: 'cup',
+          quantity: 1,
+        },
+        {
+          name: 'canned corn',
+          measurement: 'cup',
+          quantity: 1,
+        },
+        {
+          name: 'green chiles',
+          measurement: 'can (oz)',
+          quantity: 4,
+        },
+        {
+          name: 'shredded rotisserie chicken',
+          measurement: 'cup',
+          quantity: 1,
+        },
+        {
+          name: 'shredded cheaddar',
+          measurement: 'cup',
+          quantity: 1,
+        },
+        {
+          name: 'Taco Seasoning',
+          measurement: 'package',
+          quantity: 1,
+        },
+        {
+          name: 'fresh cilantro',
+          measurement: 'tbsp',
+          quantity: 3,
+        },
+        {
+          name: 'ripe avocados',
+          measurement: '',
+          quantity: 3,
+        },
+        {
+          name: 'ranch dressing',
+          measurement: 'cup',
+          quantity: 1,
+        },
+        {
+          name: 'lime juice',
+          measurement: 'cup',
+          quantity: (1/4).toFixed(2),
+        },
+        {
+          name: 'kosher salt',
+          measurement: 'tsp',
+          quantity: 1,
+        },
+        {
+          name: 'fresh ground black pepper',
+          measurement: 'tsp',
+          quantity: 1,
+        },
+      ],
+      instructions: [
+        '1. Heat broiler. In a large bowl, combine black beans, corn, 1/2 can green chiles, Tyson Grilled & Ready Pulled Chicken Breasts, cheddar, taco seasoning, and fresh cilantro. Stir until combined.',
+        '2. Halve and separate three avocados, removing pit and hollowing out insides. Mash insides in a small bowl and set aside.',
+        '3. Place avocado boats face up and fill each with 1/3 cup of filling. Sprinkle with more cheddar and more fresh cilantro, then broil until cheese is melty, about 2 minutes.',
+        '4. Make the dressing: In a medium bowl, combine ranch, lime juice, remaining green chiles, cilantro, salt, and pepper and stir to combine. Fold in mashed avocados and mix until smooth.',
+        '5. Remove avocado boats from oven and transfer to serving dish. Drizzle with dressing and garnish with more cilantro, if desired. Serve immediately.',
       ],
     }
   }
@@ -70,6 +102,13 @@ export default class ChickenTacoAvocado extends React.Component {
         <ProximaText key={i}>     {this.state.ingredients[i].quantity} {this.state.ingredients[i].name} {this.state.ingredients[i].measurement}
         </ProximaText>
     )}
+
+    const instructionsList = this.state.instructions.map((instruction) => {
+      return(
+        <ProximaText style={styles.paragraph} key={instruction}>     {instruction}
+        </ProximaText>
+      );
+    });
 
     return (
       <View style={styles.container}>
@@ -121,18 +160,7 @@ export default class ChickenTacoAvocado extends React.Component {
          </TouchableOpacity>
 
          <ProximaTextBold style={styles.header}> Instructions </ProximaTextBold>
-          <ProximaText style={styles.paragraph}>
-                  1. Preheat the overn to 350 degrees Farenheit. Grease a muffin pann with cooking spray.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  2. In a large bowl, whisk together the eggs, nonfat milk and 1.2 teaspoon pepper. Stir in the spinach, tomatoes and onions.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  3. Divide the mixture evenly between the 12 muffin pan cups and bake the muffin for 20 to 25 minutes, or until the egg is fully cooked. Remove the muffins from the over and let them cool for 5 minutes in the pan then use a knife to loosen the muffins from the cups.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  4. Top each muffin with sliced avocado, a follop of sala and a sprinkling of cheese then serve.
-          </ProximaText>
+          {instructionsList}
         </ScrollView>
       </View>
     )

@@ -16,52 +16,70 @@ export default class Granola extends React.Component {
     super(props);
 
     this.state = {
-      carbs: 80,
+      carbs: 368,
       protein:7,
-      fat:5,
-      fiber:2,
+      fat:20,
+      fiber:43,
       prepTime:'10 mins',
-      cookTime:'25 mins',
-      totalTime: '35 mins',
+      cookTime:'40 mins',
+      totalTime: '50 mins',
       ingredients: [
-      {
-        name: 'eggs',
-        measurement: 'large',
-        quantity: 12,
-      },
-      {
-        name: 'nonfat milk',
-        measurement: 'cup',
-        quantity: (1/3).toFixed(2),
-      },
-      {
-        name: 'cherry tomatoes',
-        measurement: 'cup',
-        quantity: (3/4).toFixed(2),
-      },
-      {
-        name: 'onions',
-        measurement: 'cup',
-        quantity: (1/2).toFixed(2),
-      },
-      {
-        name: 'avocado',
-        measurement: '',
-        quantity: '',
-      },
-      {
-        name: 'salsa',
-        measurement: '',
-        quantity: '',
-      },
-      {
-        name: 'crumbled toija or feta cheese',
-        measurement: '',
-        quantity: '',
-      },
+        {
+          name: 'old-fashioned oats',
+          measurement: 'cups',
+          quantity: 3,
+        },
+        {
+          name: 'chopped nuts',
+          measurement: 'cup',
+          quantity: (1.5).toFixed(2),
+        },
+        {
+          name: 'honey',
+          measurement: 'cup',
+          quantity: (1/2).toFixed(2),
+        },
+        {
+          name: 'vegetable oil',
+          measurement: 'cup',
+          quantity: (1/3).toFixed(2),
+        },
+        {
+          name: 'egg whites',
+          measurement: 'large',
+          quantity: 2,
+        },
+        {
+          name: 'light brown sugar',
+          measurement: 'tbsp',
+          quantity: 2,
+        },
+        {
+          name: 'ground cinnamon',
+          measurement: 'tsp',
+          quantity: (1/2).toFixed(2),
+        },
+        {
+          name: 'vanilla extract',
+          measurement: 'tbp',
+          quantity: 2,
+        },
+        {
+          name: 'dried crandberries or raisins',
+          measurement: 'cup',
+          quantity: (1/2).toFixed(2),
+        },
+      ],
+      instructions: [
+        '1. Preheat the over to 325 degrees farenheit and line a baking sheet with parchment paper',
+        '2. Spread the oats and nuts on the backing sheet, mixing them to combine, and then bake them for 10 minutes, stirring occasionally, until lightly browned. Transfer the toasted oats and nuts to a large bowl',
+        '3. In a separate medium bowl, whisk together the honey, vegetable oil, egg whites, brown sugar, cinnamon and vanilla extract. Pour the mixture over the oats and nuts and stir until the mixture is combined',
+        '4. Pour the mixture back onto the lined baking sheet, spreading it into an even layer, and bake it for 30 to 40 minutes, stirring every 10 minutes, until it is golden brown and mostly dry. Remove the granola from the overn, stir it one more time, then allow it to cool completely on the baking sheet.',
+        'Once the granola has cooled, stir in the dried canberries and servie it immediately or transfer it to an airtight container and store it up to 2 weeks at room temperature',
       ],
     }
   }
+
 
   render() {
     var ingredientsList = [];
@@ -70,6 +88,13 @@ export default class Granola extends React.Component {
         <ProximaText key={i}>     {this.state.ingredients[i].quantity} {this.state.ingredients[i].name} {this.state.ingredients[i].measurement}
         </ProximaText>
     )}
+
+    const instructionsList = this.state.instructions.map((instruction) => {
+      return(
+        <ProximaText style={styles.paragraph} key={instruction}>     {instruction}
+        </ProximaText>
+      );
+    });
 
     return (
       <View style={styles.container}>
@@ -121,18 +146,7 @@ export default class Granola extends React.Component {
          </TouchableOpacity>
 
          <ProximaTextBold style={styles.header}> Instructions </ProximaTextBold>
-          <ProximaText style={styles.paragraph}>
-                  1. Preheat the overn to 350 degrees Farenheit. Grease a muffin pann with cooking spray.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  2. In a large bowl, whisk together the eggs, nonfat milk and 1.2 teaspoon pepper. Stir in the spinach, tomatoes and onions.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  3. Divide the mixture evenly between the 12 muffin pan cups and bake the muffin for 20 to 25 minutes, or until the egg is fully cooked. Remove the muffins from the over and let them cool for 5 minutes in the pan then use a knife to loosen the muffins from the cups.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  4. Top each muffin with sliced avocado, a follop of sala and a sprinkling of cheese then serve.
-          </ProximaText>
+          {instructionsList}
         </ScrollView>
       </View>
     )

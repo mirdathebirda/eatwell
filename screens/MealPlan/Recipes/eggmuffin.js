@@ -24,41 +24,47 @@ export default class EggMuffin extends React.Component {
       cookTime:'25 mins',
       totalTime: '35 mins',
       ingredients: [
-      {
-        name: 'eggs',
-        measurement: 'large',
-        quantity: 12,
-      },
-      {
-        name: 'nonfat milk',
-        measurement: 'cup',
-        quantity: (1/3).toFixed(2),
-      },
-      {
-        name: 'cherry tomatoes',
-        measurement: 'cup',
-        quantity: (3/4).toFixed(2),
-      },
-      {
-        name: 'onions',
-        measurement: 'cup',
-        quantity: (1/2).toFixed(2),
-      },
-      {
-        name: 'avocado',
-        measurement: '',
-        quantity: '',
-      },
-      {
-        name: 'salsa',
-        measurement: '',
-        quantity: '',
-      },
-      {
-        name: 'crumbled toija or feta cheese',
-        measurement: '',
-        quantity: '',
-      },
+        {
+          name: 'eggs',
+          measurement: 'large',
+          quantity: 12,
+        },
+        {
+          name: 'nonfat milk',
+          measurement: 'cup',
+          quantity: (1/3).toFixed(2),
+        },
+        {
+          name: 'cherry tomatoes',
+          measurement: 'cup',
+          quantity: (3/4).toFixed(2),
+        },
+        {
+          name: 'onions',
+          measurement: 'cup',
+          quantity: (1/2).toFixed(2),
+        },
+        {
+          name: 'avocado',
+          measurement: '',
+          quantity: '',
+        },
+        {
+          name: 'salsa',
+          measurement: '',
+          quantity: '',
+        },
+        {
+          name: 'crumbled toija or feta cheese',
+          measurement: '',
+          quantity: '',
+        },
+      ],
+      instructions: [
+        '1. Preheat the overn to 350 degrees Farenheit. Grease a muffin pann with cooking spray.',
+        '2. In a large bowl, whisk together the eggs, nonfat milk and 1.2 teaspoon pepper. Stir in the spinach, tomatoes and onions.',
+        '3. Divide the mixture evenly between the 12 muffin pan cups and bake the muffin for 20 to 25 minutes, or until the egg is fully cooked. Remove the muffins from the over and let them cool for 5 minutes in the pan then use a knife to loosen the muffins from the cups.',
+        '4. Top each muffin with sliced avocado, a follop of sala and a sprinkling of cheese then serve.',
       ],
     }
   }
@@ -70,6 +76,13 @@ export default class EggMuffin extends React.Component {
         <ProximaText key={i}>     {this.state.ingredients[i].quantity} {this.state.ingredients[i].name} {this.state.ingredients[i].measurement}
         </ProximaText>
     )}
+
+    const instructionsList = this.state.instructions.map((instruction) => {
+      return(
+        <ProximaText style={styles.paragraph} key={instruction}>     {instruction}
+        </ProximaText>
+      );
+    });
 
     return (
       <View style={styles.container}>
@@ -121,18 +134,7 @@ export default class EggMuffin extends React.Component {
          </TouchableOpacity>
 
          <ProximaTextBold style={styles.header}> Instructions </ProximaTextBold>
-          <ProximaText style={styles.paragraph}>
-                  1. Preheat the overn to 350 degrees Farenheit. Grease a muffin pann with cooking spray.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  2. In a large bowl, whisk together the eggs, nonfat milk and 1.2 teaspoon pepper. Stir in the spinach, tomatoes and onions.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  3. Divide the mixture evenly between the 12 muffin pan cups and bake the muffin for 20 to 25 minutes, or until the egg is fully cooked. Remove the muffins from the over and let them cool for 5 minutes in the pan then use a knife to loosen the muffins from the cups.
-          </ProximaText>
-          <ProximaText style={styles.paragraph}>
-                  4. Top each muffin with sliced avocado, a follop of sala and a sprinkling of cheese then serve.
-          </ProximaText>
+          {instructionsList}
         </ScrollView>
       </View>
     )
