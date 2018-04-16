@@ -13,6 +13,10 @@ import GranolaScreen from '../../screens/MealPlan/Recipes/granola';
 import BangBangChickenScreen from '../../screens/MealPlan/Recipes/bangbangchicken';
 
 import AddToMealplanScreen from '../../screens/MealPlan/AddToMealplan';
+import BreakfastScreen from '../../screens/MealPlan/BreakfastScreen';
+import LunchDinnerScreen from '../../screens/MealPlan/LunchDinnerScreen';
+import SnackScreen from '../../screens/MealPlan/SnackScreen';
+
 
 export default StackNavigator(
   {
@@ -33,6 +37,15 @@ export default StackNavigator(
     },
     AddtoMP: {
       screen: AddToMealplanScreen,
+    },
+    Breakfast: {
+      screen: BreakfastScreen,
+    },
+    LunchDinner: {
+      screen: LunchDinnerScreen,
+    },
+    Snacks: {
+      screen: SnackScreen,
     },
   },
   {

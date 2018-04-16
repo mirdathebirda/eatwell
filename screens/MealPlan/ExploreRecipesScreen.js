@@ -47,15 +47,15 @@ export default class ExploreRecipesScreen extends React.Component {
 					</View>
 				</View>
 				<View style={styles.categories}>
-					<TouchableOpacity onPress={() => navigate('FrostCake')} style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('Breakfast')} style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/recipes/eggmuffin.png')} />
 						<ProximaText> Breakfast </ProximaText>
 					</TouchableOpacity>
-					<TouchableOpacity onPress={() => navigate('FrostCake')} style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('LunchDinner')} style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/recipes/tacostew.png')} />
 						<ProximaText> Lunch/Dinner </ProximaText>
 					</TouchableOpacity>
-					<TouchableOpacity onPress={() => navigate('FrostCake')} style={styles.item}>
+					<TouchableOpacity onPress={() => navigate('Snacks')} style={styles.item}>
 						<Image style={styles.image} source={require('../../assets/images/recipes/granola.png')} />
 						<ProximaText> Snacks </ProximaText>
 					</TouchableOpacity>
