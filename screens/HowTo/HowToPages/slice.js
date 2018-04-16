@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Dimensions, Image, StyleSheet, Text, ScrollView, View } from 'react-native';
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, ScrollView, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../../constants/Colors';
 import { ProximaText, ProximaTextBold } from '../../../components/StyledText';
@@ -19,7 +19,7 @@ export default class Slice extends React.Component {
       completed: false,
     }
   }
-  
+
   render() {
     return (
       <View style={styles.container}>
@@ -50,10 +50,10 @@ export default class Slice extends React.Component {
             Repeat, using a circular motion and keeping the blade tip against the board at all times.
           </ProximaText>
 
+          <TouchableOpacity style={styles.button} onPress={this.onPress} >
+            <ProximaText style={styles.buttonText}> {this.state.buttonText} </ProximaText>
+          </TouchableOpacity>
 
-
-  				<Button title='Ive got it!' color='#293753'/>
-          {/*  TODO: change this stupid thing to touchable opacity bc buttons are a stupid piece of shit write add on press functionality and styles for the button */}
         </ScrollView>
       </View>
     );
@@ -70,6 +70,20 @@ export default class Slice extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  button:{
+    backgroundColor: Colors.navy,
+    borderRadius: 5,
+    height: 40,
+    marginTop:10,
+    marginBottom:30,
+    paddingTop:12,
+    paddingBottom:5,
+    width: 100,
+    alignSelf: 'flex-end',
+  },
+  buttonText: {
+    color: '#fff',
+  },
   container: {
 		flex: 1,
 		paddingTop: 15,

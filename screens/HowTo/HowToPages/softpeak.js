@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Dimensions, Image, StyleSheet, Text, ScrollView, View } from 'react-native';
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, ScrollView, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../../constants/Colors';
 import { ProximaText } from '../../../components/StyledText';
@@ -37,8 +37,10 @@ export default class SoftPeak extends React.Component {
           <Image style={{ width: Dimensions.get('window').width, height: 300, marginBottom: 15}} source={{uri: 'https://bhg-backend-environment-prod-contentbucket-jvtb2yi8us17.s3.amazonaws.com/bhg/images/2017/8/1/101146624.jpg'}} />
   				<ProximaText style={styles.paragraph}> 5. Continue to beat the eggs until the tips of egg whites curl when beaters are lifted. </ProximaText>
 
-  				<Button title='Ive got it!' color='#293753'/>
-          {/*  TODO: change this stupid thing to touchable opacity bc buttons are a stupid piece of shit write add on press functionality and styles for the button */}
+          <TouchableOpacity style={styles.button} onPress={this.onPress} >
+            <ProximaText style={styles.buttonText}> {this.state.buttonText} </ProximaText>
+          </TouchableOpacity>
+
         </ScrollView>
       </View>
     );
@@ -55,6 +57,21 @@ export default class SoftPeak extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  button:{
+    backgroundColor: Colors.navy,
+    borderRadius: 5,
+    height: 40,
+    marginTop:10,
+    marginBottom:30,
+    paddingTop:12,
+    paddingBottom:5,
+    width: 100,
+    alignSelf: 'flex-end',
+  },
+  buttonText: {
+    color: '#fff',
+    textAlign:'center',
+  },
   container: {
 		flex: 1,
 		paddingTop: 15,

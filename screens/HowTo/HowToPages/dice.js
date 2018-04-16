@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Dimensions, Image, StyleSheet, Text, TouchableOpacity, ScrollView, View } from 'react-native';
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, ScrollView, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../../constants/Colors';
 import { ProximaText } from '../../../components/StyledText';
@@ -31,7 +31,7 @@ export default class Dice extends React.Component {
           <ProximaText style={styles.paragraph}> 4. Cut into sticks: Stack the slices on top of each other and cut the slices lengthwise into sticks that are the same width as the slices. </ProximaText>
           <ProximaText style={styles.paragraph}> 5. Dice: Cut the sticks crosswise, again in the same width as the sticks, to produce dice.</ProximaText>
           <TouchableOpacity style={styles.button} onPress={this.onPress} >
-            <Text> {this.state.buttonText} </Text>
+            <ProximaText style={styles.buttonText}> {this.state.buttonText} </ProximaText>
           </TouchableOpacity>
         </ScrollView>
       </View>
@@ -50,10 +50,17 @@ export default class Dice extends React.Component {
 const styles = StyleSheet.create({
   button:{
     backgroundColor: Colors.navy,
-    color: '#fff',
-    height: 20,
-    paddingTop:5,
+    borderRadius: 5,
+    height: 40,
+    marginTop:10,
+    marginBottom:30,
+    paddingTop:12,
     paddingBottom:5,
+    width: 100,
+    alignSelf: 'flex-end',
+  },
+  buttonText: {
+    color: '#fff',
     textAlign:'center',
   },
   container: {
