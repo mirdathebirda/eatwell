@@ -82,6 +82,8 @@ export default class Granola extends React.Component {
 
 
   render() {
+    const { navigate } = this.props.navigation; //used to link to other pages
+    
     var ingredientsList = [];
     for (let i = 0; i < this.state.ingredients.length; i++) {
       ingredientsList.push(
@@ -141,7 +143,7 @@ export default class Granola extends React.Component {
          <ProximaTextBold style={styles.header}> Ingredients </ProximaTextBold>
           {ingredientsList}
 
-         <TouchableOpacity style={styles.button} >
+          <TouchableOpacity onPress={() => navigate('AddtoMP')} style={styles.button} >
            <ProximaText style={styles.buttonText}> Add to Meal Plan </ProximaText>
          </TouchableOpacity>
 

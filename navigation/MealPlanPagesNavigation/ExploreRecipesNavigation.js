@@ -12,6 +12,8 @@ import ChickenTacoAvocadoScreen from '../../screens/MealPlan/Recipes/chickentaco
 import GranolaScreen from '../../screens/MealPlan/Recipes/granola';
 import BangBangChickenScreen from '../../screens/MealPlan/Recipes/bangbangchicken';
 
+import AddToMealplanScreen from '../../screens/MealPlan/AddToMealplan';
+
 export default StackNavigator(
   {
     Main: {
@@ -28,6 +30,9 @@ export default StackNavigator(
     },
     BangBangChicken: {
       screen: BangBangChickenScreen,
+    },
+    AddtoMP: {
+      screen: AddToMealplanScreen,
     },
   },
   {
