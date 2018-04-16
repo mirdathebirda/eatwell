@@ -5,6 +5,7 @@ import Colors from '../../constants/Colors';
 import { ProximaText,ProximaTextBold } from '../../components/StyledText';
 
 import PercentageCircle from 'react-native-percentage-circle';
+import { SearchBar } from 'react-native-elements'
 
 
 export default class Breakfast extends React.Component {
@@ -12,13 +13,55 @@ export default class Breakfast extends React.Component {
     title: 'Breakfast',
   };
 
+
 	render() {
     const { navigate } = this.props.navigation; //used to link to other pages
 
 		return (
-			<ScrollView style={styles.container}>
-        <ProximaText> hi </ProximaText>
-			</ScrollView>
+      <View style={styles.container}>
+  			<ScrollView style={styles.container}>
+          <SearchBar lightTheme placeholder='Type Here...' />
+          <View style = {styles.mealplanBar}>
+            <ProximaText style = {styles.header}> This Week's Meal Plan </ProximaText>
+            <View style={styles.pcircles} >
+              <View style={styles.pcircle} >
+                <PercentageCircle borderWidth={5} radius={25} percent={75} color={Colors.navy}></PercentageCircle>
+                <ProximaText> Carbs </ProximaText>
+              </View>
+              <View style={styles.pcircle} >
+                <PercentageCircle borderWidth={5} radius={25} percent={54} color={Colors.navy}></PercentageCircle>
+                <ProximaText> Protein </ProximaText>
+              </View>
+              <View style={styles.pcircle} >
+                <PercentageCircle borderWidth={5} radius={25} percent={92} color={Colors.navy}></PercentageCircle>
+                <ProximaText> Fat </ProximaText>
+              </View>
+              <View style={styles.pcircle} >
+                <PercentageCircle borderWidth={5} radius={25} percent={33} color={Colors.navy}></PercentageCircle>
+                <ProximaText> Fiber </ProximaText>
+              </View>
+              <View style={styles.pcircle} >
+                <PercentageCircle borderWidth={5} radius={25} percent={61} color={Colors.navy}></PercentageCircle>
+                <ProximaText> Iron </ProximaText>
+              </View>
+            </View>
+          </View>
+          <View style={styles.categories}>
+  					<TouchableOpacity onPress={() => navigate('EggMuffin')} style={styles.item}>
+  						<Image style={styles.image} source={require('../../assets/images/recipes/eggmuffin.png')} />
+  						<ProximaText> Healthy Breakfast Egg Muffins </ProximaText>
+  					</TouchableOpacity>
+  					<TouchableOpacity onPress={() => navigate('Granola')} style={styles.item}>
+  						<Image style={styles.image} source={require('../../assets/images/recipes/granola.png')} />
+  						<ProximaText> Homemade Granola </ProximaText>
+  					</TouchableOpacity>
+  					<TouchableOpacity onPress={() => navigate('EggMuffin')} style={styles.item}>
+  						<Image style={styles.image} source={require('../../assets/images/recipes/eggmuffin.png')} />
+  						<ProximaText> Healthy Breakfast Egg Muffins </ProximaText>
+  					</TouchableOpacity>
+  				</View>
+  			</ScrollView>
+      </View>
 		);
 	}
 }
@@ -29,16 +72,6 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     backgroundColor: '#fff',
   },
-	datebar: {
-		borderTopWidth:2,
-		borderBottomWidth:2,
-	},
-	date: {
-		textAlign: 'center',
-		fontSize:17,
-		marginTop:5,
-		marginBottom:5,
-	},
 	header: {
 		fontSize:17,
 		marginTop:10,
@@ -73,22 +106,20 @@ const styles = StyleSheet.create({
 	meals: {
 		flexDirection:'column',
 	},
-	item: {
-		marginTop: 5,
-		marginRight:5,
-		marginLeft:5,
-		marginBottom:5,
-		paddingBottom:5,
-		flex:1,
-		flexDirection: 'row',
-	},
-	image: {
-		height: 165,
-		width: 165,
-		marginBottom:5,
-	},
-	itemText: {
-		marginLeft:10,
-		marginTop:10,
-	},
+  categories: {
+    flexDirection: 'column',
+  },
+  item: {
+    borderColor:'#000000',
+    borderWidth:0.8,
+    marginTop: 10,
+    marginRight:5,
+    marginLeft:5,
+    marginBottom:5,
+    paddingBottom:5,
+  },
+  image: {
+    height: 165,
+    marginBottom:5,
+  },
 });

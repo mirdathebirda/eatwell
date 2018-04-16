@@ -20,6 +20,7 @@ export default class BangBangChicken extends React.Component {
       protein:7,
       fat:5,
       fiber:2,
+      health:'♥ ♡ ♡',
       prepTime:'10 mins',
       cookTime:'25 mins',
       totalTime: '35 mins',
@@ -151,7 +152,7 @@ export default class BangBangChicken extends React.Component {
                 <ProximaText style={styles.nutritionFactText}> Fiber </ProximaText>
               </View>
               <View style={styles.nutritionFact} >
-                <ProximaText style={styles.nutritionFactText}> ♥ ♥ ♥ </ProximaText>
+                <ProximaText style={styles.nutritionFactText}> {this.state.health}  </ProximaText>
                 <ProximaText style={styles.nutritionFactText}> Health </ProximaText>
               </View>
             </View>

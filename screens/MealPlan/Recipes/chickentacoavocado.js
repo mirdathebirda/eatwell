@@ -20,6 +20,7 @@ export default class ChickenTacoAvocado extends React.Component {
       protein:13,
       fat:32,
       fiber:16,
+      health:'♥ ♡  ♡ ',
       prepTime:'20 mins',
       cookTime:'2 mins',
       totalTime: '22 mins',
@@ -134,7 +135,7 @@ export default class ChickenTacoAvocado extends React.Component {
                 <ProximaText style={styles.nutritionFactText}> Fiber </ProximaText>
               </View>
               <View style={styles.nutritionFact} >
-                <ProximaText style={styles.nutritionFactText}> ♥ ♥ ♥ </ProximaText>
+                <ProximaText style={styles.nutritionFactText}> {this.state.health} </ProximaText>
                 <ProximaText style={styles.nutritionFactText}> Health </ProximaText>
               </View>
             </View>

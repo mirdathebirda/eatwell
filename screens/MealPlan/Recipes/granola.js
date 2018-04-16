@@ -9,7 +9,7 @@ import PercentageCircle from 'react-native-percentage-circle';
 
 export default class Granola extends React.Component {
   static navigationOptions = {
-    title: 'Granola'
+    title: 'Homemade Granola'
   };
 
   constructor(props){
@@ -20,6 +20,7 @@ export default class Granola extends React.Component {
       protein:7,
       fat:20,
       fiber:43,
+      health: '♥ ♥ ♥ ',
       prepTime:'10 mins',
       cookTime:'40 mins',
       totalTime: '50 mins',
@@ -83,7 +84,7 @@ export default class Granola extends React.Component {
 
   render() {
     const { navigate } = this.props.navigation; //used to link to other pages
-    
+
     var ingredientsList = [];
     for (let i = 0; i < this.state.ingredients.length; i++) {
       ingredientsList.push(
@@ -120,7 +121,7 @@ export default class Granola extends React.Component {
                 <ProximaText style={styles.nutritionFactText}> Fiber </ProximaText>
               </View>
               <View style={styles.nutritionFact} >
-                <ProximaText style={styles.nutritionFactText}> ♥ ♥ ♥ </ProximaText>
+                <ProximaText style={styles.nutritionFactText}> {this.state.health} </ProximaText>
                 <ProximaText style={styles.nutritionFactText}> Health </ProximaText>
               </View>
             </View>
