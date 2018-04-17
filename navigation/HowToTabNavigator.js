@@ -41,16 +41,17 @@ export default TabNavigator(
         let iconName;
         switch (routeName) {
           case 'Home':
-            iconName = EatwellIcon;
+            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'ios-restaurant-outline';
             break;
           case 'HowToMain':
-            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
+            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-book';
             break;
           case 'HowToCompleted':
             iconName =
-              Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
+              Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'ios-done-all-outline';
+              break;
           case 'HowToSettings':
-            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
+            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-switch';
             break;
         }
         return (
