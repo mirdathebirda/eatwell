@@ -119,7 +119,7 @@ export default class BangBangChicken extends React.Component {
     var ingredientsList = [];
     for (let i = 0; i < this.state.ingredients.length; i++) {
       ingredientsList.push(
-        <ProximaText key={i}>     {this.state.ingredients[i].quantity} {this.state.ingredients[i].name} {this.state.ingredients[i].measurement}
+        <ProximaText key={i}>     {this.state.ingredients[i].quantity} {this.state.ingredients[i].measurement} {this.state.ingredients[i].name} 
         </ProximaText>
     )}
 

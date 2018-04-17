@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
-import { ProximaText } from '../../components/StyledText';
+import { ProximaText, ProximaTextBold } from '../../components/StyledText';
 import Colors from '../../constants/Colors';
 import { CheckBox } from 'react-native-elements';
 
@@ -14,91 +14,153 @@ export default class GroceryListScreen extends React.Component {
    super();
 
    this.state = {
-      checked: false,
+      ingredients: [
+        {
+          name: 'eggs',
+          measurement: 'large',
+          quantity: 12,
+          checked: false,
+          type:'produce',
+          text:'',
+        },
+        {
+          name: 'cherry tomatoes',
+          measurement: 'cup',
+          quantity: (3/4).toFixed(2),
+          checked: false,
+          type:'produce',
+          text:'',
+        },
+        {
+          name: 'onions',
+          measurement: 'cup',
+          quantity: (1/2).toFixed(2),
+          checked: false,
+          type:'produce',
+          text:'',
+        },
+        {
+          name: 'chicken breasts (boneless, skinless)',
+          measurement: '',
+          quantity: 4,
+          checked: false,
+          type:'meat',
+          text:'',
+        },
+        {
+          name: 'all purpose flour',
+          measurement: 'cup',
+          quantity: (3/4).toFixed(2),
+          checked: false,
+          type:'dry baking goods',
+          text:'',
+        },
+        {
+          name: 'Panko breadcrumbs',
+          measurement: 'cup',
+          quantity: 1,
+          checked: false,
+          type:'dry baking goods',
+          text:'',
+        },
+        {
+          name: 'buttermilk',
+          measurement: 'cup',
+          quantity: 1,
+          checked: false,
+          type:'dairy',
+          text:'',
+        },
+        {
+          name: 'Sweet Chili Sauce',
+          measurement: 'cup',
+          quantity: (1/2).toFixed(2),
+          checked: false,
+          type:'spices and sauces',
+          text:'',
+        },
+      ],
    }
 	}
 
   render() {
-		const { checked } = this.state;
+    var produce = [];
+    var dairy = [];
+    var spicesandsauces = [];
+    var meat = []
+    var drybakingoods = [];
+
+    for (let i = 0; i < this.state.ingredients.length; i++) {
+      this.state.ingredients[i].text = `${this.state.ingredients[i].quantity} ${this.state.ingredients[i].measurement} ${this.state.ingredients[i].name}`;
+
+      if (this.state.ingredients[i].type == 'produce') {
+        produce.push(
+          <CheckBox key={i}
+            title= {this.state.ingredients[i].text}
+            checked= {this.state.ingredients[i].checked}
+            checkedColor={Colors.navy}
+            onPress={this.state.ingredients[i].checked = !this.state.ingredients[i].checked}
+          />
+        )
+      }
+
+      else if (this.state.ingredients[i].type == 'dairy') {
+        dairy.push(
+          <CheckBox key={i}
+            title= {this.state.ingredients[i].text}
+            checked={this.state.ingredients[i].checked}
+            checkedColor={Colors.navy}
+            onPress={this.state.ingredients[i].checked = !this.state.ingredients[i].checked}
+          />
+        )
+      }
+      else if (this.state.ingredients[i].type == 'spices and sauces') {
+        spicesandsauces.push(
+          <CheckBox key={i}
+            title= {this.state.ingredients[i].text}
+            checked={this.state.ingredients[i].checked}
+            checkedColor={Colors.navy}
+            onPress={this.state.ingredients[i].checked = !this.state.ingredients[i].checked}
+          />
+        )
+      }
+      else if (this.state.ingredients[i].type == 'meat') {
+        meat.push(
+          <CheckBox key={i}
+            title= {this.state.ingredients[i].text}
+            checked={this.state.ingredients[i].checked}
+            checkedColor={Colors.navy}
+            onPress={this.state.ingredients[i].checked = !this.state.ingredients[i].checked}
+          />
+        )
+      }
+      else if (this.state.ingredients[i].type == 'dry baking goods') {
+        drybakingoods.push(
+          <CheckBox key={i}
+            title= {this.state.ingredients[i].text}
+            checked={this.state.ingredients[i].checked}
+            checkedColor={Colors.navy}
+            onPress={this.state.ingredients[i].checked = !this.state.ingredients[i].checked}
+          />
+        )
+      }
+    }
 
     return (
-      <ScrollView style={styles.container}>
-				<ProximaText style={styles.header}> Produce </ProximaText>
-				<CheckBox
-          title="4oz brocoli"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="2 beefsteak tomatoes"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-
-				<ProximaText style={styles.header}> Meat </ProximaText>
-				<CheckBox
-          title="1lb of chicken"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-
-				<ProximaText style={styles.header}> Dairy </ProximaText>
-				<CheckBox
-          title="1 cup buttermilk"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="1 large egg"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-
-				<ProximaText style={styles.header}>Dry/Baking Goods</ProximaText>
-				<CheckBox
-          title="1 cup Panko breadcrumbs"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="3/4 all-purpose flour"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title=" 1/2 cup cornstarch"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-
-				<ProximaText style={styles.header}>Spices and Sauces</ProximaText>
-				<CheckBox
-          title="1/2 cup mayonaise"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="1/4 cup sweet chili sauce"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-				<CheckBox
-          title="1 tbsp hot sauce (Sriracha)"
-          checked={this.state.checked}
-					checkedColor={Colors.navy}
-          onPress={() => this.setState({ checked: !this.state.checked })}
-        />
-			</ScrollView>
+      <View style={styles.container}>
+        <ScrollView style={styles.container}>
+  				<ProximaTextBold style={styles.header}> Produce </ProximaTextBold>
+          {produce}
+          <ProximaTextBold style={styles.header}> Meat </ProximaTextBold>
+          {meat}
+          <ProximaTextBold style={styles.header}> Dairy </ProximaTextBold>
+          {dairy}
+          <ProximaTextBold style={styles.header}> Dry/Baking Goods </ProximaTextBold>
+          {drybakingoods}
+          <ProximaTextBold style={styles.header}> Spices and Sauces </ProximaTextBold>
+          {spicesandsauces}
+  			</ScrollView>
+      </View>
     );
   }
 }
