@@ -17,7 +17,7 @@ export default class AddtoMP extends React.Component {
    super();
 
    this.state = {
-      checked: false,
+      checked: true,
       date:"12-03-2017",
    }
 	}
