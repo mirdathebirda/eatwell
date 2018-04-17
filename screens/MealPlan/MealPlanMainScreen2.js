@@ -65,6 +65,13 @@ export default class MealPlanMainScreen extends React.Component {
 								<ProximaText>Description of recipes </ProximaText>
 							</View>
 						</TouchableOpacity>
+						<TouchableOpacity onPress={() => navigate('BangBangChicken')} style={styles.item}>
+			        <Image style={styles.image} source={require('../../assets/images/recipes/bangbangchicken.png')} />
+							<View style={styles.itemText}>
+								<ProximaText>Bang Bang Chicken</ProximaText>
+								<ProximaText>Description of recipes </ProximaText>
+							</View>
+						</TouchableOpacity>
 					</View>
 					<ProximaTextBold style = {styles.header}> Snacks </ProximaTextBold>
 					<View style={styles.meals}>

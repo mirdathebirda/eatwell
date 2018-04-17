@@ -23,40 +23,7 @@ export default class MacroScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container}>
-          <ProximaText style={styles.articleb}> Basic Information </ProximaText>
-          <View style={styles.exerciseOutput}>
-            <View style={styles.exerciseOutput}>
-              <ProximaText style={styles.exerciseOutputTitle}> Age </ProximaText>
-              <TextInput style={styles.textInput}
-              keyboardType = 'numeric'
-              underlineColorAndroid='transparent'
-              />
-            </View>
-            <ProximaText style={styles.exerciseOutputTitle}> Weight </ProximaText>
-            <TextInput style={styles.textInput}
-            keyboardType = 'numeric'
-            underlineColorAndroid='transparent'
-            />
-          </View>
-          <View style={styles.exerciseOutput}>
-            <ProximaText style={styles.exerciseOutputTitle}> Height </ProximaText>
-            <TextInput style={styles.textInput}
-            keyboardType = 'numeric'
-            underlineColorAndroid='transparent'
-            />
-          </View>
-          <CheckBox
-            title="Male"
-            checked={this.state.checked}
-  					checkedColor={Colors.navy}
-            onPress={() => this.setState({ checked: !this.state.checked })}
-          />
-  				<CheckBox
-            title="Female"
-            checked={this.state.checked}
-  					checkedColor={Colors.navy}
-            onPress={() => this.setState({ checked: !this.state.checked })}
-          />
+          <ProximaText style={styles.articleb}> What are nutrition macros? </ProximaText>
   				<ProximaText style={styles.articley}> Describe your Daily Activity </ProximaText>
   				<CheckBox
             title="Sedentary"
@@ -123,9 +90,7 @@ export default class MacroScreen extends React.Component {
             onPress={() => this.setState({ checked: !this.state.checked })}
           />
 
-          <TouchableOpacity  style={styles.button} >
-             <ProximaText style={styles.buttonText}> Valculate </ProximaText>
-           </TouchableOpacity>
+  				<Button title='CALCULATE' color='Colors.lemon'/>
   				<View style={styles.calculations}>
   					<ProximaText style={styles.calcField}></ProximaText>
   					<ProximaText style={styles.calcField}></ProximaText>
@@ -140,29 +105,11 @@ export default class MacroScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  button:{
-    backgroundColor: Colors.lemon,
-    borderColor: Colors.navy,
-    borderTopWidth:1,
-    borderBottomWidth:1,
-    borderLeftWidth:1,
-    borderRightWidth:1,
-    borderRadius: 5,
-    height: 35,
-    marginTop:10,
-    marginBottom: 5,
-    paddingTop:10,
-    width: 100,
-  },
-  buttonText: {
-    color: Colors.navy,
-    textAlign:'center',
-  },
   container: {
-    flex: 1,
-    paddingTop: 10,
-		paddingLeft: 10,
-		paddingRight:10,
+		flex: 1,
+    paddingTop: 15,
+		paddingLeft: 15,
+		paddingRight:15,
     backgroundColor: '#fff',
   },
 	articleb: {

@@ -12,6 +12,8 @@ import ChickenTacoAvocadoScreen from '../../screens/MealPlan/Recipes/chickentaco
 import GranolaScreen from '../../screens/MealPlan/Recipes/granola';
 import BangBangChickenScreen from '../../screens/MealPlan/Recipes/bangbangchicken';
 
+import MealPlanMainScreen2 from '../../screens/MealPlan/MealPlanMainScreen2';
+
 import AddToMealplanScreen from '../../screens/MealPlan/AddToMealplan';
 import BreakfastScreen from '../../screens/MealPlan/BreakfastScreen';
 import LunchDinnerScreen from '../../screens/MealPlan/LunchDinnerScreen';
@@ -22,6 +24,9 @@ export default StackNavigator(
   {
     Main: {
       screen: MealPlanMainScreen,
+    },
+    Main2: {
+      screen: MealPlanMainScreen2,
     },
     EggMuffin: {
       screen: EggMuffinScreen,

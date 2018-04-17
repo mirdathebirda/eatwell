@@ -98,25 +98,97 @@ export default class AddtoMP extends React.Component {
             Great! These ingredients will be added  to your grocery list (deselect any you don't want to add)
           </ProximaText>
           <CheckBox
-            title="4oz brocoli"
+            title="2 tbsp hot sauce (Sriracha)"
             checked={this.state.checked}
   					checkedColor={Colors.navy}
             onPress={() => this.setState({ checked: !this.state.checked })}
           />
           <CheckBox
-            title="4oz brocoli"
+            title="1/2 cup mayonnaise"
             checked={this.state.checked}
   					checkedColor={Colors.navy}
             onPress={() => this.setState({ checked: !this.state.checked })}
           />
           <CheckBox
-            title="4oz brocoli"
+            title="1/2 cup sweet chili sauce"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="2 tbsp honey"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="4 chicken breasts (boneless, skinless)"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="3/4 cup all purpose flour"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="1/2 cup cornstarch"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="1 tbsp garlic powder"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="1 tsp smoked paprika"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="1/2 tsp salt"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="1/2 tsp pepper"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="1 large egg"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="1 cup buttermilk"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="1 cup Panko breafcrumbs"
+            checked={this.state.checked}
+  					checkedColor={Colors.navy}
+            onPress={() => this.setState({ checked: !this.state.checked })}
+          />
+          <CheckBox
+            title="oil"
             checked={this.state.checked}
   					checkedColor={Colors.navy}
             onPress={() => this.setState({ checked: !this.state.checked })}
           />
 
-          <TouchableOpacity onPress={() => navigate('Main')} style={styles.button} >
+          <TouchableOpacity onPress={() => navigate('Main2')} style={styles.button} >
            <ProximaText style={styles.buttonText}> Okay! </ProximaText>
          </TouchableOpacity>
   			</ScrollView>
