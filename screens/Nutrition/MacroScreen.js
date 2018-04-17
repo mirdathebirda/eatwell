@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, TextInput, View } from 'react-native';
+import { Dimensions, StyleSheet, ScrollView, TextInput, TouchableOpacity, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../constants/Colors';
 import { ProximaText } from '../../components/StyledText';
@@ -90,7 +90,10 @@ export default class MacroScreen extends React.Component {
             onPress={() => this.setState({ checked: !this.state.checked })}
           />
 
-  				<Button title='CALCULATE' color='Colors.lemon'/>
+          <TouchableOpacity style={styles.button} >
+            <ProximaText style={styles.buttonText}> CALCULATE </ProximaText>
+          </TouchableOpacity>
+
   				<View style={styles.calculations}>
   					<ProximaText style={styles.calcField}></ProximaText>
   					<ProximaText style={styles.calcField}></ProximaText>
@@ -105,6 +108,19 @@ export default class MacroScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  button:{
+    backgroundColor: Colors.lemon,
+    borderRadius: 5,
+    height: 40,
+    marginTop:10,
+    paddingTop:12,
+    paddingBottom:5,
+    width: Dimensions.get('window').width,
+  },
+  buttonText: {
+    color: Colors.navy,
+    textAlign:'center',
+  },
   container: {
 		flex: 1,
     paddingTop: 15,
