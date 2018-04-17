@@ -86,10 +86,18 @@ export default class FrostCake extends React.Component {
 
   // Function
   onPress = () => {
-    this.setState({
-      buttonText:'✓',
-      completed: true,
-    })
+    if (this.state.completed == false) {
+      this.setState({
+        buttonText:'✓',
+        completed: true,
+      })
+    }
+    else {
+      this.setState({
+        buttonText:"I've got this!",
+        completed: false,
+      })
+    }
   }
 }
 
