@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dimensions, Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-native';
+import { Alert, Dimensions, Image, TouchableOpacity, ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Colors from '../../../constants/Colors';
 import { ProximaText, ProximaTextBold } from '../../../components/StyledText';
@@ -158,7 +158,7 @@ export default class ChickenTacoAvocado extends React.Component {
          <ProximaTextBold style={styles.header}> Ingredients </ProximaTextBold>
           {ingredientsList}
 
-         <TouchableOpacity onPress={() => navigate('AddtoMP')} style={styles.button} >
+         <TouchableOpacity onPress={() => { Alert.alert('This is already in your meal plan!'); }} style={styles.button} >
            <ProximaText style={styles.buttonText}> Add to Meal Plan </ProximaText>
          </TouchableOpacity>
 
