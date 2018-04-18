@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "eatwell",
-    "description": "A very interesting project.",
+    "name": "Eatwell",
+    "description": "A mobile application prototype aimed to help young adults and college students meal plan and be more conscious of what kinds of food they eat, but teach them to learn basic cooking skills and food skills. The main focus and driving flow of the app will be the meal planning aspect, although the nutrition education and cooking education will be linked to the recipes and meal planning throughout the entire thing.",
     "slug": "eatwell",
     "privacy": "public",
     "sdkVersion": "25.0.0",

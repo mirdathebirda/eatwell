@@ -90,8 +90,8 @@ export default class MacroScreen extends React.Component {
             onPress={() => this.setState({ checked: !this.state.checked })}
           />
 
-          <TouchableOpacity style={styles.button} >
-            <ProximaText style={styles.buttonText}> CALCULATE </ProximaText>
+          <TouchableOpacity style={styles.button}>
+            <ProximaText style={styles.buttonText}>CALCULATE</ProximaText>
           </TouchableOpacity>
 
   				<View style={styles.calculations}>
